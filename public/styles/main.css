@@ -172,51 +172,95 @@ a:hover {
 
 /* Listing Cards */
 .listing-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   overflow: hidden;
-  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.listing-card .card-img-top {
-  height: 180px;
+.listing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.listing-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.listing-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  transition: var(--transition);
-  transform: translateZ(0);
+  transition: transform 0.3s ease;
 }
 
-.listing-card:hover .card-img-top {
+.listing-card:hover .listing-image img {
   transform: scale(1.05);
 }
 
-.listing-card .badge {
-  font-size: 0.75rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  background-color: var(--accent-color);
+.listing-image .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 20px;
 }
 
-.listing-card .card-title {
-  font-weight: 700;
+.listing-content {
+  padding: 1.25rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-content .card-title {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  line-height: 1.4;
   color: var(--dark-color);
+  font-weight: 600;
 }
 
-.listing-card .card-text {
-  color: var(--secondary-color);
+.listing-content .card-text {
   font-size: 0.9rem;
+  color: #666;
   margin-bottom: 1rem;
-  line-height: 1.5;
+  flex-grow: 1;
 }
 
-.listing-card .price {
-  font-weight: 800;
-  color: var(--accent-color);
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+.listing-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
+
+.listing-meta .price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.listing-meta .location {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.listing-meta .location i {
+  margin-right: 5px;
+  color: var(--primary-color);
+}
+
+.listing-card .btn {
+  margin-top: auto;
 }
 
 /* Location Cards */
@@ -449,52 +493,50 @@ footer p {
 
 /* Category Cards */
 .category-card {
-  text-align: center;
+  background: #fff;
+  border-radius: var(--border-radius);
   padding: 1.5rem;
-  transition: var(--transition);
-  border: 1px solid var(--border-color);
-  overflow: hidden;
-  background-color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .category-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .category-icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 1.25rem;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  background: var(--primary-color);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1) 0%, rgba(231, 76, 60, 0.05) 100%);
-  border-radius: 50%;
-  transition: var(--transition);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .category-card:hover .category-icon {
-  background: linear-gradient(135deg, rgba(231, 76, 60, 0.2) 0%, rgba(231, 76, 60, 0.1) 100%);
   transform: scale(1.1);
+  background: linear-gradient(135deg, var(--primary-color), #0056b3);
 }
 
 .category-icon i {
-  font-size: 2rem;
-  color: var(--accent-color);
-  transition: var(--transition);
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .category-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
   color: var(--dark-color);
-  font-weight: 700;
 }
 
 .category-card p {
-  color: var(--secondary-color);
   font-size: 0.9rem;
+  color: #666;
   margin-bottom: 0;
 }
 

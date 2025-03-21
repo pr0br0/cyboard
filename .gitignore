@@ -1,10 +1,13 @@
 # Dependencies
 node_modules/
 package-lock.json
+npm-debug.log
+yarn-error.log
 
 # Environment variables
 .env
 .env.local
+.env.*.local
 .env.development
 .env.test
 .env.production
@@ -20,11 +23,8 @@ package-lock.json
 .idea/
 
 # Logs
-logs
+logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 
 # Runtime data
 pids
@@ -60,18 +60,4 @@ temp/
 .npm/
 
 # Optional eslint cache
-.eslintcache# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-# Logs
-logs/
-*.log
-# Logs
-logs/
-*.log
-# Logs
-logs/
-*.log
+.eslintcache
