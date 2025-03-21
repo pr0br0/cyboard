@@ -25,24 +25,103 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="listings.html">Browse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="post-ad.html">Post Ad</a>
+            <button class="btn btn-primary" id="registerBtn">Register</button>
           </li>
         </ul>
-        <div class="d-flex">
-          <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
-          <button class="btn btn-primary" id="registerBtn">Register</button>
-        </div>
       </div>
     </div>
   </nav>
+
+  <!-- Search Section -->
+  <div class="search-section py-3 bg-white border-bottom">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-auto">
+          <select class="form-select" id="categorySelect">
+            <option selected>For sale</option>
+            <option>To rent</option>
+            <option>Wanted</option>
+            <option>Services</option>
+          </select>
+        </div>
+        <div class="col">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="bi bi-geo-alt text-muted"></i>
+            </span>
+            <input type="text" class="form-control border-start-0" placeholder="Country, region or city">
+          </div>
+        </div>
+        <div class="col-auto">
+          <select class="form-select" id="areaSelect">
+            <option selected>Area</option>
+            <option>Nicosia</option>
+            <option>Limassol</option>
+            <option>Larnaca</option>
+            <option>Paphos</option>
+            <option>Famagusta</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <select class="form-select" id="conditionSelect">
+            <option selected>Condition</option>
+            <option>New</option>
+            <option>Used</option>
+            <option>For parts</option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-primary px-4">Search</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Navigation -->
+  <div class="category-nav py-2 bg-white border-bottom">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-tag-fill me-2"></i> For sale
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-car-front-fill me-2 text-primary"></i>
+            <span class="position-relative">
+              Vehicles
+              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle-y">Hot</span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-house-door-fill me-2"></i>
+            <span class="position-relative">
+              Real estate
+              <span class="badge bg-success position-absolute top-0 start-100 translate-middle-y">New</span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-briefcase-fill me-2"></i> Jobs
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="#">
+            <i class="bi bi-search me-2"></i> Search in all categories
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero-section">
