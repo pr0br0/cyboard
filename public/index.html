@@ -66,134 +66,66 @@
   <!-- Main Content -->
   <div class="container">
     <!-- Categories Section -->
-    <section class="py-5">
+    <section class="categories-section py-5">
       <div class="container">
-        <h2 class="section-title">Browse Categories</h2>
+        <h2 class="section-title text-center mb-5">Browse Categories</h2>
         <div class="row g-4">
-          <!-- Vehicles -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=vehicles" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-car-front-fill"></i>
-                </div>
-                <h3>Vehicles</h3>
-                <p>Find cars, motorcycles, and more</p>
+          <!-- Properties Category -->
+          <div class="col-md-4">
+            <div class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-house-door"></i>
               </div>
-            </a>
+              <h3>Properties</h3>
+              <p>Find your perfect home, apartment, or commercial space in Cyprus</p>
+              <a href="listings.html?category=properties" class="btn btn-outline-primary mt-3">Browse Properties</a>
+            </div>
           </div>
 
-          <!-- Real Estate -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=real-estate" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-house-heart-fill"></i>
-                </div>
-                <h3>Real Estate</h3>
-                <p>Properties for sale and rent</p>
+          <!-- Cars Category -->
+          <div class="col-md-4">
+            <div class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-car-front"></i>
               </div>
-            </a>
+              <h3>Cars</h3>
+              <p>New and used vehicles from trusted sellers across Cyprus</p>
+              <a href="listings.html?category=cars" class="btn btn-outline-primary mt-3">Browse Cars</a>
+            </div>
           </div>
 
-          <!-- Electronics -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=electronics" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-laptop-fill"></i>
-                </div>
-                <h3>Electronics</h3>
-                <p>Phones, computers, and gadgets</p>
+          <!-- Jobs Category -->
+          <div class="col-md-4">
+            <div class="category-card">
+              <div class="category-icon">
+                <i class="bi bi-briefcase"></i>
               </div>
-            </a>
-          </div>
-
-          <!-- Jobs -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=jobs" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-briefcase-fill"></i>
-                </div>
-                <h3>Jobs</h3>
-                <p>Find your next career opportunity</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Services -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=services" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-tools"></i>
-                </div>
-                <h3>Services</h3>
-                <p>Professional services and trades</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Furniture -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=furniture" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-couch"></i>
-                </div>
-                <h3>Furniture</h3>
-                <p>Home and office furniture</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Fashion -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=fashion" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-bag-heart-fill"></i>
-                </div>
-                <h3>Fashion</h3>
-                <p>Clothing, shoes, and accessories</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Sports -->
-          <div class="col-6 col-md-4 col-lg-3">
-            <a href="listings.html?category=sports" class="text-decoration-none">
-              <div class="card category-card h-100">
-                <div class="category-icon">
-                  <i class="bi bi-trophy-fill"></i>
-                </div>
-                <h3>Sports</h3>
-                <p>Equipment and gear</p>
-              </div>
-            </a>
+              <h3>Jobs</h3>
+              <p>Find your next career opportunity or post job openings</p>
+              <a href="listings.html?category=jobs" class="btn btn-outline-primary mt-3">Browse Jobs</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
     
     <!-- Latest Listings -->
-    <section class="py-5 bg-white">
+    <section class="latest-listings py-5 bg-white">
       <div class="container">
-        <h2 class="section-title">Latest Listings</h2>
+        <h2 class="section-title text-center mb-5">Latest Listings</h2>
         <div class="row g-4">
-          <!-- Vehicle Listing -->
+          <!-- Property Listing -->
           <div class="col-md-6 col-lg-4">
             <div class="listing-card">
               <div class="listing-image">
-                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&auto=format&fit=crop&q=60" alt="BMW X5" class="img-fluid">
-                <span class="badge bg-primary">Vehicles</span>
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=60" alt="Luxury Villa" class="img-fluid">
+                <span class="badge bg-success">Properties</span>
               </div>
               <div class="listing-content">
-                <h5 class="card-title">BMW X5 2020 - Excellent Condition</h5>
-                <p class="card-text">Luxury SUV with full service history, 45,000 km, automatic transmission, leather interior, panoramic roof.</p>
+                <h5 class="card-title">Luxury Villa with Pool - Limassol</h5>
+                <p class="card-text">5-bedroom villa with private pool, garden, and sea view. Modern amenities, security system, and parking.</p>
                 <div class="listing-meta">
-                  <span class="price">€45,000</span>
+                  <span class="price">€850,000</span>
                   <span class="location"><i class="bi bi-geo-alt"></i> Limassol</span>
                 </div>
                 <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
@@ -201,12 +133,50 @@
             </div>
           </div>
           
-          <!-- Real Estate Listing -->
+          <!-- Car Listing -->
+          <div class="col-md-6 col-lg-4">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&auto=format&fit=crop&q=60" alt="BMW X5" class="img-fluid">
+                <span class="badge bg-primary">Cars</span>
+              </div>
+              <div class="listing-content">
+                <h5 class="card-title">BMW X5 2020 - Excellent Condition</h5>
+                <p class="card-text">Luxury SUV with full service history, 45,000 km, automatic transmission, leather interior, panoramic roof.</p>
+                <div class="listing-meta">
+                  <span class="price">€45,000</span>
+                  <span class="location"><i class="bi bi-geo-alt"></i> Nicosia</span>
+                </div>
+                <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Job Listing -->
+          <div class="col-md-6 col-lg-4">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=60" alt="Web Developer Job" class="img-fluid">
+                <span class="badge bg-secondary">Jobs</span>
+              </div>
+              <div class="listing-content">
+                <h5 class="card-title">Senior Web Developer - Full Stack</h5>
+                <p class="card-text">Looking for experienced developer, React/Node.js, competitive salary, remote work possible.</p>
+                <div class="listing-meta">
+                  <span class="price">€3,500/month</span>
+                  <span class="location"><i class="bi bi-geo-alt"></i> Limassol</span>
+                </div>
+                <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Property Listing -->
           <div class="col-md-6 col-lg-4">
             <div class="listing-card">
               <div class="listing-image">
                 <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop&q=60" alt="Beachfront Apartment" class="img-fluid">
-                <span class="badge bg-success">Real Estate</span>
+                <span class="badge bg-success">Properties</span>
               </div>
               <div class="listing-content">
                 <h5 class="card-title">Beachfront Apartment for Rent</h5>
@@ -220,37 +190,18 @@
             </div>
           </div>
           
-          <!-- Electronics Listing -->
+          <!-- Car Listing -->
           <div class="col-md-6 col-lg-4">
             <div class="listing-card">
               <div class="listing-image">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60" alt="MacBook Pro" class="img-fluid">
-                <span class="badge bg-info">Electronics</span>
+                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&auto=format&fit=crop&q=60" alt="Mercedes-Benz" class="img-fluid">
+                <span class="badge bg-primary">Cars</span>
               </div>
               <div class="listing-content">
-                <h5 class="card-title">MacBook Pro 16" 2021 - M1 Pro</h5>
-                <p class="card-text">Like new condition, 32GB RAM, 1TB SSD, comes with original box and accessories.</p>
+                <h5 class="card-title">Mercedes-Benz C-Class 2021</h5>
+                <p class="card-text">Premium sedan, low mileage, AMG package, panoramic roof, premium sound system.</p>
                 <div class="listing-meta">
-                  <span class="price">€2,200</span>
-                  <span class="location"><i class="bi bi-geo-alt"></i> Nicosia</span>
-                </div>
-                <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Furniture Listing -->
-          <div class="col-md-6 col-lg-4">
-            <div class="listing-card">
-              <div class="listing-image">
-                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=60" alt="Italian Leather Sofa" class="img-fluid">
-                <span class="badge bg-warning">Furniture</span>
-              </div>
-              <div class="listing-content">
-                <h5 class="card-title">Italian Leather Sofa - Like New</h5>
-                <p class="card-text">Genuine Italian leather, 3-seater, barely used, comes with matching ottoman.</p>
-                <div class="listing-meta">
-                  <span class="price">€1,200</span>
+                  <span class="price">€38,000</span>
                   <span class="location"><i class="bi bi-geo-alt"></i> Paphos</span>
                 </div>
                 <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
@@ -258,37 +209,18 @@
             </div>
           </div>
           
-          <!-- Services Listing -->
+          <!-- Job Listing -->
           <div class="col-md-6 col-lg-4">
             <div class="listing-card">
               <div class="listing-image">
-                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop&q=60" alt="English Language Lessons" class="img-fluid">
-                <span class="badge bg-danger">Services</span>
-              </div>
-              <div class="listing-content">
-                <h5 class="card-title">English Language Lessons</h5>
-                <p class="card-text">Native English teacher, 10+ years experience, flexible schedule, online or in-person.</p>
-                <div class="listing-meta">
-                  <span class="price">€25/hour</span>
-                  <span class="location"><i class="bi bi-geo-alt"></i> Limassol</span>
-                </div>
-                <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Jobs Listing -->
-          <div class="col-md-6 col-lg-4">
-            <div class="listing-card">
-              <div class="listing-image">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=60" alt="Web Developer Job" class="img-fluid">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&auto=format&fit=crop&q=60" alt="Finance Manager Job" class="img-fluid">
                 <span class="badge bg-secondary">Jobs</span>
               </div>
               <div class="listing-content">
-                <h5 class="card-title">Web Developer - Full Stack</h5>
-                <p class="card-text">Looking for experienced developer, React/Node.js, competitive salary, remote work possible.</p>
+                <h5 class="card-title">Finance Manager - International Company</h5>
+                <p class="card-text">Experienced finance professional needed, competitive package, relocation assistance available.</p>
                 <div class="listing-meta">
-                  <span class="price">€3,500/month</span>
+                  <span class="price">€4,500/month</span>
                   <span class="location"><i class="bi bi-geo-alt"></i> Nicosia</span>
                 </div>
                 <a href="listing-detail.html" class="btn btn-outline-primary w-100">View Details</a>

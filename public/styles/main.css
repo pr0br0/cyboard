@@ -180,6 +180,7 @@ a:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid #eee;
 }
 
 .listing-card:hover {
@@ -189,7 +190,7 @@ a:hover {
 
 .listing-image {
   position: relative;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -197,54 +198,59 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .listing-card:hover .listing-image img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .listing-image .badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  font-size: 0.8rem;
+  top: 15px;
+  right: 15px;
+  padding: 8px 15px;
+  font-size: 0.85rem;
   border-radius: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .listing-content {
-  padding: 1.25rem;
+  padding: 1.5rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .listing-content .card-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
   color: var(--dark-color);
   font-weight: 600;
+  line-height: 1.4;
 }
 
 .listing-content .card-text {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #666;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   flex-grow: 1;
+  line-height: 1.6;
 }
 
 .listing-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
-  padding-top: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding-top: 0.8rem;
   border-top: 1px solid #eee;
 }
 
 .listing-meta .price {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--primary-color);
 }
@@ -252,6 +258,8 @@ a:hover {
 .listing-meta .location {
   font-size: 0.9rem;
   color: #666;
+  display: flex;
+  align-items: center;
 }
 
 .listing-meta .location i {
@@ -260,7 +268,10 @@ a:hover {
 }
 
 .listing-card .btn {
-  margin-top: auto;
+  padding: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Location Cards */
@@ -377,24 +388,26 @@ footer p {
   background-color: var(--accent-color) !important;
 }
 
+/* Section Titles */
 .section-title {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--dark-color);
   margin-bottom: 2rem;
   position: relative;
   padding-bottom: 1rem;
 }
 
-.section-title::after {
+.section-title:after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 3px;
 }
 
 /* Responsive Design */
@@ -495,10 +508,11 @@ footer p {
 .category-card {
   background: #fff;
   border-radius: var(--border-radius);
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  border: 1px solid #eee;
 }
 
 .category-card:hover {
@@ -507,10 +521,10 @@ footer p {
 }
 
 .category-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1rem;
-  background: var(--primary-color);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), #0056b3);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -520,24 +534,33 @@ footer p {
 
 .category-card:hover .category-icon {
   transform: scale(1.1);
-  background: linear-gradient(135deg, var(--primary-color), #0056b3);
+  background: linear-gradient(135deg, #0056b3, var(--primary-color));
 }
 
 .category-icon i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fff;
 }
 
 .category-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
   color: var(--dark-color);
+  font-weight: 600;
 }
 
 .category-card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
-  margin-bottom: 0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.category-card .btn {
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Add this to improve responsiveness */
