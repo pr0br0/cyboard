@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Classified Ad | Cyprus Classified</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .form-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .form-section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .form-section-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    .upload-area {
+      min-height: 200px;
+      border: 2px dashed var(--border-color);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: border-color 0.3s;
+      padding: 1.5rem;
+    }
+    .upload-area:hover {
+      border-color: var(--primary-color);
+    }
+    .upload-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    .preview-images {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .image-preview {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      border: 1px solid var(--border-color);
+    }
+    .remove-image {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .bg-light {
+      background-color: var(--light-color) !important;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-house-heart-fill"></i> Cyprus Classified
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listings.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="post-ad.html">Post Ad</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn me-2" id="loginBtn">Login</button>
+          <button class="btn btn-primary rounded-pill" id="registerBtn">Register</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-4">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="mb-4">Post a Classified Ad</h1>
+        <p class="lead mb-4">Complete the form below to publish your classified ad. Fields marked with <span class="text-danger">*</span> are required.</p>
+        
+        <form id="postAdForm">
+          <!-- Category Selection -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">1</div>
+              <h4 class="mb-0">Select a Category</h4>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="categorySelect" class="form-label">Category <span class="text-danger">*</span></label>
+                <select class="form-select" id="categorySelect" required>
+                  <option value="" selected disabled>-- Select Category --</option>
+                  <option value="vehicles">Vehicles</option>
+                  <option value="real-estate">Real Estate</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="home-garden">Home & Garden</option>
+                  <option value="jobs">Jobs</option>
+                  <option value="services">Services</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="pets">Pets</option>
+                  <option value="community">Community</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="subcategorySelect" class="form-label">Subcategory <span class="text-danger">*</span></label>
+                <select class="form-select" id="subcategorySelect" required disabled>
+                  <option value="" selected disabled>-- Select Subcategory --</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Basic Information -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">2</div>
+              <h4 class="mb-0">Ad Details</h4>
+            </div>
+            <div class="mb-3">
+              <label for="titleInput" class="form-label">Title <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="titleInput" placeholder="A descriptive title for your ad" required>
+              <div class="form-text">Be clear and specific (70 characters max)</div>
+            </div>
+            <div class="mb-3">
+              <label for="descriptionTextarea" class="form-label">Description <span class="text-danger">*</span></label>
+              <textarea class="form-control" id="descriptionTextarea" rows="5" placeholder="Describe your item in detail" required></textarea>
+              <div class="form-text">Include condition, features, reason for selling (2000 characters max)</div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="priceInput" class="form-label">Price (€) <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="priceInput" placeholder="Price in Euros" min="0" step="0.01" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label">Price Type</label>
+                <div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="priceType" id="fixedPrice" value="fixed" checked>
+                    <label class="form-check-label" for="fixedPrice">Fixed Price</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="priceType" id="negotiable" value="negotiable">
+                    <label class="form-check-label" for="negotiable">Negotiable</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="conditionSelect" class="form-label">Condition</label>
+                <select class="form-select" id="conditionSelect">
+                  <option value="" selected disabled>-- Select Condition --</option>
+                  <option value="new">New / Unused</option>
+                  <option value="like-new">Like New</option>
+                  <option value="excellent">Excellent</option>
+                  <option value="good">Good</option>
+                  <option value="fair">Fair</option>
+                  <option value="salvage">For Parts / Not Working</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="brandInput" class="form-label">Brand</label>
+                <input type="text" class="form-control" id="brandInput" placeholder="Brand name (if applicable)">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Images Upload -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">3</div>
+              <h4 class="mb-0">Upload Images</h4>
+            </div>
+            <p class="mb-3">Add up to 10 photos. First image will be the cover photo. Minimum image size: 400x300px.</p>
+            <div class="upload-area" id="uploadArea">
+              <i class="bi bi-cloud-arrow-up upload-icon"></i>
+              <p class="mb-1">Drag and drop files here, or click to browse</p>
+              <p class="text-muted small">Supported formats: JPG, PNG, WEBP (Max 5MB each)</p>
+              <input type="file" id="imageUpload" hidden multiple accept="image/*">
+            </div>
+            <div class="preview-images" id="previewContainer">
+              <!-- Image previews will be added here dynamically -->
+            </div>
+          </div>
+          
+          <!-- Location -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">4</div>
+              <h4 class="mb-0">Location</h4>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="citySelect" class="form-label">City <span class="text-danger">*</span></label>
+                <select class="form-select" id="citySelect" required>
+                  <option value="" selected disabled>-- Select City --</option>
+                  <option value="nicosia">Nicosia</option>
+                  <option value="limassol">Limassol</option>
+                  <option value="larnaca">Larnaca</option>
+                  <option value="paphos">Paphos</option>
+                  <option value="famagusta">Famagusta</option>
+                  <option value="kyrenia">Kyrenia</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="districtInput" class="form-label">District / Area</label>
+                <input type="text" class="form-control" id="districtInput" placeholder="Neighborhood, district, or area">
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hideLocationCheck">
+              <label class="form-check-label" for="hideLocationCheck">
+                Hide exact location in ad
+              </label>
+            </div>
+          </div>
+          
+          <!-- Contact Details -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">5</div>
+              <h4 class="mb-0">Contact Information</h4>
+            </div>
+            <div class="mb-3">
+              <label for="nameInput" class="form-label">Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="nameInput" required placeholder="Your name or business name">
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="phoneInput" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" id="phoneInput" required placeholder="Your phone number">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="emailInput" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="emailInput" required placeholder="Your email address">
+              </div>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="whatsappCheck">
+              <label class="form-check-label" for="whatsappCheck">
+                I am available on WhatsApp
+              </label>
+            </div>
+          </div>
+          
+          <!-- Review & Submit -->
+          <div class="form-section">
+            <div class="form-section-header">
+              <div class="form-section-number">6</div>
+              <h4 class="mb-0">Review & Submit</h4>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">
+                  I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="promotionCheck">
+                <label class="form-check-label" for="promotionCheck">
+                  Send me promotional emails about special offers and new features
+                </label>
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg">Post My Ad</button>
+              <button type="button" class="btn btn-outline-secondary">Save as Draft</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Cyprus Classified</h5>
+          <p>The easiest way to buy and sell across Cyprus. Join our community today!</p>
+          <div class="social-links mt-4">
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Vehicles</a></li>
+            <li class="mb-2"><a href="#">Real Estate</a></li>
+            <li class="mb-2"><a href="#">Electronics</a></li>
+            <li class="mb-2"><a href="#">Jobs</a></li>
+            <li class="mb-2"><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">About Us</a></li>
+            <li class="mb-2"><a href="#">Contact</a></li>
+            <li class="mb-2"><a href="#">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#">Terms of Use</a></li>
+            <li class="mb-2"><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <address class="mb-0">
+            <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Main Street, Nicosia, Cyprus</p>
+            <p class="mb-2"><i class="bi bi-telephone me-2"></i> +357 22 123456</p>
+            <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@cyprusclassified.com</p>
+          </address>
+        </div>
+      </div>
+      <hr class="mt-4 mb-4">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2023 Cyprus Classified. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> in Cyprus</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Image upload functionality
+      const uploadArea = document.getElementById('uploadArea');
+      const imageUpload = document.getElementById('imageUpload');
+      const previewContainer = document.getElementById('previewContainer');
+      
+      uploadArea.addEventListener('click', () => {
+        imageUpload.click();
+      });
+      
+      uploadArea.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadArea.style.borderColor = 'var(--primary-color)';
+      });
+      
+      uploadArea.addEventListener('dragleave', () => {
+        uploadArea.style.borderColor = 'var(--border-color)';
+      });
+      
+      uploadArea.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadArea.style.borderColor = 'var(--border-color)';
+        if (e.dataTransfer.files.length) {
+          handleFiles(e.dataTransfer.files);
+        }
+      });
+      
+      imageUpload.addEventListener('change', () => {
+        if (imageUpload.files.length) {
+          handleFiles(imageUpload.files);
+        }
+      });
+      
+      function handleFiles(files) {
+        const fileArray = Array.from(files);
+        fileArray.forEach(file => {
+          if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+              const imgContainer = document.createElement('div');
+              imgContainer.style.position = 'relative';
+              imgContainer.style.display = 'inline-block';
+              
+              const img = document.createElement('img');
+              img.src = e.target.result;
+              img.className = 'image-preview';
+              imgContainer.appendChild(img);
+              
+              const removeBtn = document.createElement('div');
+              removeBtn.className = 'remove-image';
+              removeBtn.innerHTML = '<i class="bi bi-x"></i>';
+              removeBtn.addEventListener('click', () => {
+                imgContainer.remove();
+              });
+              imgContainer.appendChild(removeBtn);
+              
+              previewContainer.appendChild(imgContainer);
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      }
+      
+      // Category and subcategory relationship
+      const categorySelect = document.getElementById('categorySelect');
+      const subcategorySelect = document.getElementById('subcategorySelect');
+      
+      const subcategories = {
+        'vehicles': ['Cars', 'Motorcycles', 'Trucks', 'Boats', 'Parts & Accessories'],
+        'real-estate': ['Apartments for Sale', 'Houses for Sale', 'Rentals', 'Vacation Rentals', 'Commercial'],
+        'electronics': ['Mobile Phones', 'Computers', 'TVs', 'Cameras', 'Audio Equipment'],
+        'home-garden': ['Furniture', 'Appliances', 'Garden', 'Tools', 'Decor'],
+        'jobs': ['Full-time', 'Part-time', 'Temporary', 'Internship', 'Remote'],
+        'services': ['Cleaning', 'Repairs', 'Tutoring', 'Moving', 'Professional'],
+        'fashion': ['Men\'s Clothing', 'Women\'s Clothing', 'Jewelry', 'Bags', 'Shoes'],
+        'pets': ['Dogs', 'Cats', 'Birds', 'Fish', 'Pet Supplies'],
+        'community': ['Events', 'Classes', 'Musicians', 'Volunteers', 'Lost & Found']
+      };
+      
+      categorySelect.addEventListener('change', () => {
+        const category = categorySelect.value;
+        
+        // Clear subcategories
+        subcategorySelect.innerHTML = '<option value="" selected disabled>-- Select Subcategory --</option>';
+        
+        if (category in subcategories) {
+          // Enable subcategory select
+          subcategorySelect.disabled = false;
+          
+          // Add relevant subcategories
+          subcategories[category].forEach(subcategory => {
+            const option = document.createElement('option');
+            option.value = subcategory.toLowerCase().replace(/\s+/g, '-');
+            option.textContent = subcategory;
+            subcategorySelect.appendChild(option);
+          });
+        }
+      });
+      
+      // Form submission
+      const postAdForm = document.getElementById('postAdForm');
+      
+      postAdForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simulate form submission - in a real app, this would send data to the server
+        alert('Your ad has been submitted for review!');
+        
+        // Redirect to listings page
+        // window.location.href = 'listings.html';
+      });
+    });
+  </script>
+</body>
+</html> 

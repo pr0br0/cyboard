@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Listings - Cyprus Classified</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-house-heart-fill"></i> Cyprus Classified
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="listings.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post-ad.html">Post Ad</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
+          <button class="btn btn-primary" id="registerBtn">Register</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1>Browse Listings</h1>
+          <p class="lead">Find what you're looking for in Cyprus. Browse through thousands of listings across various categories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Filters -->
+    <div class="row mb-4">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label">Category</label>
+                <select class="form-select">
+                  <option selected>All Categories</option>
+                  <option>Vehicles</option>
+                  <option>Real Estate</option>
+                  <option>Electronics</option>
+                  <option>Jobs</option>
+                  <option>Services</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Location</label>
+                <select class="form-select">
+                  <option selected>All Locations</option>
+                  <option>Nicosia</option>
+                  <option>Limassol</option>
+                  <option>Larnaca</option>
+                  <option>Paphos</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">Price Range</label>
+                <select class="form-select">
+                  <option selected>Any Price</option>
+                  <option>Under €100</option>
+                  <option>€100 - €500</option>
+                  <option>€500 - €1000</option>
+                  <option>Over €1000</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label class="form-label">&nbsp;</label>
+                <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Listings Grid -->
+    <div class="row">
+      <!-- Listing 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card listing-card h-100">
+          <img src="images/vehicle-listing.svg" class="card-img-top" alt="BMW X5 2020">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Vehicles</span>
+              <span class="text-muted small">2 days ago</span>
+            </div>
+            <h5 class="card-title">BMW X5 2020 - Excellent Condition</h5>
+            <p class="card-text">Selling my BMW X5 2020 model with only 30,000km. Full service history, no accidents.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">€45,000</span>
+              <span class="text-muted">Limassol</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card listing-card h-100">
+          <img src="images/real-estate-listing.svg" class="card-img-top" alt="Beachfront Apartment">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Real Estate</span>
+              <span class="text-muted small">1 day ago</span>
+            </div>
+            <h5 class="card-title">Beachfront Apartment for Rent</h5>
+            <p class="card-text">Beautiful 2-bedroom apartment with direct sea view. Fully furnished with all amenities.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">€1,200/month</span>
+              <span class="text-muted">Larnaca</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Listing 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card listing-card h-100">
+          <img src="images/electronics-listing.svg" class="card-img-top" alt="MacBook Pro">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="badge bg-primary">Electronics</span>
+              <span class="text-muted small">Just now</span>
+            </div>
+            <h5 class="card-title">MacBook Pro 16" 2021 - M1 Pro</h5>
+            <p class="card-text">Selling my MacBook Pro 16" with M1 Pro chip, 16GB RAM, 1TB SSD. Like new condition with warranty.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="price">€1,800</span>
+              <span class="text-muted">Nicosia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more listings here -->
+    </div>
+
+    <!-- Pagination -->
+    <nav class="mt-4">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>About Us</h5>
+          <p>Cyprus Classified is your trusted platform for buying and selling in Cyprus. We connect buyers and sellers across the island.</p>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html> 

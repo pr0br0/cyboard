@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW X5 2020 - Excellent Condition | Cyprus Classified</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .gallery-image {
+      height: 600px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .thumbnail {
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .thumbnail:hover, .thumbnail.active {
+      opacity: 1;
+    }
+    .seller-info {
+      border-radius: 8px;
+      box-shadow: var(--box-shadow);
+    }
+    .specs-list li {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .specs-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-house-heart-fill"></i> Cyprus Classified
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="listings.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="post-ad.html">Post Ad</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn me-2" id="loginBtn">Login</button>
+          <button class="btn btn-primary rounded-pill" id="registerBtn">Register</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="bg-white border-bottom">
+    <div class="container py-2">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 py-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="listings.html">Browse</a></li>
+          <li class="breadcrumb-item"><a href="#">Vehicles</a></li>
+          <li class="breadcrumb-item active" aria-current="page">BMW X5 2020</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container py-4">
+    <div class="row">
+      <!-- Left Column - Listing Details -->
+      <div class="col-lg-8 mb-4">
+        <!-- Listing Title & Meta -->
+        <div class="mb-4">
+          <div class="d-flex align-items-center mb-2">
+            <span class="badge bg-primary me-2">Vehicles</span>
+            <span class="text-muted small">Posted 2 days ago</span>
+            <span class="ms-auto text-muted small"><i class="bi bi-eye"></i> 124 views</span>
+          </div>
+          <h1 class="mb-2">BMW X5 2020 - Excellent Condition</h1>
+          <div class="d-flex align-items-center">
+            <span class="me-3"><i class="bi bi-geo-alt"></i> Limassol</span>
+            <span class="me-3"><i class="bi bi-share"></i> Share</span>
+            <span><i class="bi bi-bookmark"></i> Save</span>
+          </div>
+        </div>
+        
+        <!-- Gallery -->
+        <div class="mb-4">
+          <div class="mb-3">
+            <img src="https://via.placeholder.com/1200x800?text=BMW+X5+Main+Photo" alt="BMW X5 2020" class="img-fluid gallery-image w-100">
+          </div>
+          <div class="row g-2">
+            <div class="col-3">
+              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Front" alt="BMW X5 Front" class="img-fluid rounded thumbnail active">
+            </div>
+            <div class="col-3">
+              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Side" alt="BMW X5 Side" class="img-fluid rounded thumbnail">
+            </div>
+            <div class="col-3">
+              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Rear" alt="BMW X5 Rear" class="img-fluid rounded thumbnail">
+            </div>
+            <div class="col-3">
+              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Interior" alt="BMW X5 Interior" class="img-fluid rounded thumbnail">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Price -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="price text-primary">€45,000</h2>
+          </div>
+        </div>
+        
+        <!-- Details -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">Details</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="specs-list list-unstyled">
+                  <li><strong>Brand:</strong> BMW</li>
+                  <li><strong>Model:</strong> X5</li>
+                  <li><strong>Year:</strong> 2020</li>
+                  <li><strong>Body Type:</strong> SUV</li>
+                  <li><strong>Transmission:</strong> Automatic</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="specs-list list-unstyled">
+                  <li><strong>Fuel Type:</strong> Diesel</li>
+                  <li><strong>Engine Size:</strong> 3.0L</li>
+                  <li><strong>Mileage:</strong> 30,000 km</li>
+                  <li><strong>Color:</strong> Black</li>
+                  <li><strong>Registration:</strong> Cyprus Registered</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Description -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">Description</h5>
+          </div>
+          <div class="card-body">
+            <p>Selling my BMW X5 2020 model with only 30,000km. Full service history, no accidents.</p>
+            <p>This is the xDrive30d model with the M Sport package. It comes with a host of features including:</p>
+            <ul>
+              <li>Panoramic sunroof</li>
+              <li>Head-up display</li>
+              <li>Harman Kardon sound system</li>
+              <li>Adaptive cruise control</li>
+              <li>Lane keeping assist</li>
+              <li>Parking assistant with 360° camera</li>
+              <li>Heated and ventilated seats</li>
+              <li>BMW Live Cockpit Professional</li>
+            </ul>
+            <p>The vehicle has been meticulously maintained and is still under BMW warranty until March 2024. All services have been done at the official BMW dealership.</p>
+            <p>Reason for selling: Upgrading to a newer model.</p>
+            <p>Serious inquiries only please. Viewings available on weekends or after 6pm on weekdays.</p>
+          </div>
+        </div>
+        
+        <!-- Location -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">Location</h5>
+          </div>
+          <div class="card-body">
+            <p><i class="bi bi-geo-alt"></i> Limassol, Cyprus</p>
+            <img src="https://via.placeholder.com/800x300?text=Map+of+Limassol" alt="Map" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Seller Info & Similar Listings -->
+      <div class="col-lg-4">
+        <!-- Seller Information -->
+        <div class="card seller-info mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Seller Information</h5>
+            <div class="d-flex align-items-center mb-3">
+              <div class="me-3">
+                <img src="https://via.placeholder.com/60x60" alt="Seller" class="rounded-circle">
+              </div>
+              <div>
+                <h6 class="mb-1">John Doe</h6>
+                <p class="text-muted small mb-0">Member since Jan 2022</p>
+              </div>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary"><i class="bi bi-telephone"></i> Show Phone Number</button>
+              <button class="btn btn-outline-primary"><i class="bi bi-chat"></i> Send Message</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Safety Tips -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">Safety Tips</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Meet in a public place</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Check the item before buying</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Pay only after inspecting the item</li>
+              <li><i class="bi bi-check-circle text-success me-2"></i> <a href="#">More safety tips</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Similar Listings -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">Similar Listings</h5>
+          </div>
+          <div class="card-body p-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <img src="https://via.placeholder.com/80x60?text=Audi+Q7" alt="Audi Q7" class="rounded">
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Audi Q7 2021</h6>
+                    <p class="text-primary mb-1">€52,000</p>
+                    <small class="text-muted">Nicosia</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <img src="https://via.placeholder.com/80x60?text=Mercedes+GLE" alt="Mercedes GLE" class="rounded">
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Mercedes GLE 2019</h6>
+                    <p class="text-primary mb-1">€41,500</p>
+                    <small class="text-muted">Limassol</small>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="d-flex">
+                  <div class="me-3">
+                    <img src="https://via.placeholder.com/80x60?text=Range+Rover" alt="Range Rover" class="rounded">
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Range Rover Sport 2020</h6>
+                    <p class="text-primary mb-1">€58,000</p>
+                    <small class="text-muted">Paphos</small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card-footer text-center">
+            <a href="listings.html" class="text-decoration-none">View more</a>
+          </div>
+        </div>
+        
+        <!-- Report Listing -->
+        <div class="text-center">
+          <a href="#" class="text-muted small"><i class="bi bi-flag"></i> Report this listing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5>Cyprus Classified</h5>
+          <p>The easiest way to buy and sell across Cyprus. Join our community today!</p>
+          <div class="social-links mt-4">
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">Vehicles</a></li>
+            <li class="mb-2"><a href="#">Real Estate</a></li>
+            <li class="mb-2"><a href="#">Electronics</a></li>
+            <li class="mb-2"><a href="#">Jobs</a></li>
+            <li class="mb-2"><a href="#">Services</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#">About Us</a></li>
+            <li class="mb-2"><a href="#">Contact</a></li>
+            <li class="mb-2"><a href="#">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#">Terms of Use</a></li>
+            <li class="mb-2"><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Us</h5>
+          <address class="mb-0">
+            <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Main Street, Nicosia, Cyprus</p>
+            <p class="mb-2"><i class="bi bi-telephone me-2"></i> +357 22 123456</p>
+            <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@cyprusclassified.com</p>
+          </address>
+        </div>
+      </div>
+      <hr class="mt-4 mb-4">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2023 Cyprus Classified. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> in Cyprus</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Image gallery functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      const mainImg = document.querySelector('.gallery-image');
+      
+      thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          // Update main image
+          mainImg.src = this.src.replace('300x200', '1200x800');
+          
+          // Update active state
+          thumbnails.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
