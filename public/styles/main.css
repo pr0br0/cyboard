@@ -1,14 +1,14 @@
 /* Base Variables */
 :root {
-  --primary-color: #0074ba;
-  --primary-dark: #005a91;
+  --primary-color: #2e3fe5;
+  --primary-dark: #1f2fd6;
   --secondary-color: #6c757d;
-  --accent-color: #dc3545;
-  --accent-hover: #c82333;
-  --dark-color: #343a40;
+  --accent-color: #ff4e3c;
+  --accent-hover: #ff3a26;
+  --dark-color: #1a1f36;
   --light-color: #f8f9fa;
-  --border-color: #dee2e6;
-  --border-radius: 4px;
+  --border-color: #e5e9f2;
+  --border-radius: 8px;
   --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --transition: all 0.2s ease;
 }
@@ -69,61 +69,170 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   background-color: white;
   border-bottom: 1px solid var(--border-color);
 }
 
 .navbar-brand {
-  font-weight: 600;
-  color: var(--primary-color);
-  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  font-size: 1.5rem;
 }
 
 .navbar-brand i {
-  font-size: 1.75rem;
-  color: var(--accent-color);
+  color: var(--primary-color);
+  margin-right: 0.5rem;
 }
 
 .nav-link {
   font-weight: 500;
   color: var(--dark-color);
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link i {
+  font-size: 1.1rem;
+  color: var(--primary-color);
 }
 
 .nav-link:hover {
-  color: var(--accent-color);
-  background-color: rgba(231, 76, 60, 0.1);
-}
-
-.nav-link.active {
-  color: var(--accent-color);
-  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--primary-color);
 }
 
 /* Search Section */
 .search-section {
-  background-color: white;
+  background: linear-gradient(135deg, #f6f9ff 0%, #f8f9fa 100%);
+  padding: 3rem 0;
   border-bottom: 1px solid var(--border-color);
 }
 
+.search-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.search-tabs {
+  margin-bottom: 2rem;
+}
+
+.search-tabs .nav-pills {
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.search-tabs .nav-link {
+  color: var(--dark-color);
+  background-color: white;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-tabs .nav-link i {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.search-tabs .nav-link.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.search-tabs .nav-link.active i {
+  color: white;
+}
+
+.search-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
 .form-select, .form-control {
-  height: 40px;
-  border-radius: 4px;
-  border-color: var(--border-color);
-  font-size: 0.9rem;
+  height: 48px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
 }
 
 .input-group-text {
-  border-color: var(--border-color);
   background-color: white;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  padding: 0.75rem;
+}
+
+.input-group .form-control {
+  border-left: none;
+}
+
+.input-group-text i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
 }
 
 .form-control:focus, .form-select:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(0, 116, 186, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(46, 63, 229, 0.15);
+}
+
+.search-filters {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.search-filters .form-label {
+  color: var(--dark-color);
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.search-filters .form-select-sm {
+  height: 36px;
+  padding: 0.25rem 2rem 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border-color: var(--border-color);
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
 }
 
 /* Category Navigation */

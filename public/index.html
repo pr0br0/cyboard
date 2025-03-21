@@ -27,6 +27,12 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
+            <a href="#" class="nav-link"><i class="bi bi-geo-alt"></i> Location</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><i class="bi bi-bell"></i> Alerts</a>
+          </li>
+          <li class="nav-item">
             <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
           </li>
           <li class="nav-item">
@@ -38,45 +44,92 @@
   </nav>
 
   <!-- Search Section -->
-  <div class="search-section py-3 bg-white border-bottom">
+  <div class="search-section py-4">
     <div class="container">
-      <div class="row g-2">
-        <div class="col-auto">
-          <select class="form-select" id="categorySelect">
-            <option selected>For sale</option>
-            <option>To rent</option>
-            <option>Wanted</option>
-            <option>Services</option>
-          </select>
-        </div>
-        <div class="col">
-          <div class="input-group">
-            <span class="input-group-text bg-white border-end-0">
-              <i class="bi bi-geo-alt text-muted"></i>
-            </span>
-            <input type="text" class="form-control border-start-0" placeholder="Country, region or city">
+      <h1 class="search-title text-center mb-4">What would you like to search?</h1>
+      <div class="search-tabs mb-4">
+        <ul class="nav nav-pills justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="bi bi-tag"></i> For sale</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-car-front"></i> Vehicles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-house"></i> Real estate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-briefcase"></i> Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-search"></i> Search in all categories</a>
+          </li>
+        </ul>
+      </div>
+      <div class="search-form">
+        <div class="row g-3">
+          <div class="col-lg-3">
+            <select class="form-select" id="categorySelect">
+              <option selected>All Categories</option>
+              <optgroup label="For sale">
+                <option>Animals</option>
+                <option>Art - Collectibles</option>
+                <option>Electronics</option>
+                <option>Home & Garden</option>
+                <option>Vehicles</option>
+              </optgroup>
+              <optgroup label="Real Estate">
+                <option>Houses for Sale</option>
+                <option>Apartments for Rent</option>
+                <option>Commercial Space</option>
+              </optgroup>
+              <optgroup label="Jobs">
+                <option>IT & Software</option>
+                <option>Sales & Marketing</option>
+                <option>Customer Service</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="col-lg-4">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="What are you looking for?">
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+              <input type="text" class="form-control" placeholder="All Locations">
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="btn btn-primary w-100">Search</button>
           </div>
         </div>
-        <div class="col-auto">
-          <select class="form-select" id="areaSelect">
-            <option selected>Area</option>
-            <option>Nicosia</option>
-            <option>Limassol</option>
-            <option>Larnaca</option>
-            <option>Paphos</option>
-            <option>Famagusta</option>
-          </select>
-        </div>
-        <div class="col-auto">
-          <select class="form-select" id="conditionSelect">
-            <option selected>Condition</option>
-            <option>New</option>
-            <option>Used</option>
-            <option>For parts</option>
-          </select>
-        </div>
-        <div class="col-auto">
-          <button class="btn btn-primary px-4">Search</button>
+        <div class="search-filters mt-3">
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label class="form-label mb-0">Area:</label>
+            </div>
+            <div class="col-auto">
+              <select class="form-select form-select-sm">
+                <option value="0">0 km</option>
+                <option value="20">20 km</option>
+                <option value="50">50 km</option>
+                <option value="100">100 km</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <label class="form-label mb-0">Condition:</label>
+            </div>
+            <div class="col-auto">
+              <select class="form-select form-select-sm">
+                <option>All conditions</option>
+                <option>New</option>
+                <option>Used</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>
