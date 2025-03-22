@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browse Listings - Cyprus Classified</title>
+  <title>All Listings - Cyprus Classified</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -20,173 +20,234 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a href="#" class="nav-link"><i class="bi bi-geo-alt"></i> Location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="listings.html">Browse</a>
+            <a href="#" class="nav-link"><i class="bi bi-bell"></i> Alerts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post-ad.html">Post Ad</a>
+            <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary" id="registerBtn">Register</button>
           </li>
         </ul>
-        <div class="d-flex">
-          <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
-          <button class="btn btn-primary" id="registerBtn">Register</button>
-        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <h1>Browse Listings</h1>
-          <p class="lead">Find what you're looking for in Cyprus. Browse through thousands of listings across various categories.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Main Content -->
-  <div class="container">
-    <!-- Filters -->
-    <div class="row mb-4">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-body">
-            <form class="row g-3">
-              <div class="col-md-3">
-                <label class="form-label">Category</label>
-                <select class="form-select">
-                  <option selected>All Categories</option>
-                  <option>Vehicles</option>
-                  <option>Real Estate</option>
-                  <option>Electronics</option>
-                  <option>Jobs</option>
-                  <option>Services</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label class="form-label">Location</label>
-                <select class="form-select">
-                  <option selected>All Locations</option>
-                  <option>Nicosia</option>
-                  <option>Limassol</option>
-                  <option>Larnaca</option>
-                  <option>Paphos</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label class="form-label">Price Range</label>
-                <select class="form-select">
-                  <option selected>Any Price</option>
-                  <option>Under €100</option>
-                  <option>€100 - €500</option>
-                  <option>€500 - €1000</option>
-                  <option>Over €1000</option>
-                </select>
-              </div>
-              <div class="col-md-3">
-                <label class="form-label">&nbsp;</label>
-                <button type="submit" class="btn btn-primary w-100">Apply Filters</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Listings Grid -->
+  <div class="container py-5">
     <div class="row">
-      <!-- Listing 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card listing-card h-100">
-          <img src="images/vehicle-listing.svg" class="card-img-top" alt="BMW X5 2020">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary">Vehicles</span>
-              <span class="text-muted small">2 days ago</span>
-            </div>
-            <h5 class="card-title">BMW X5 2020 - Excellent Condition</h5>
-            <p class="card-text">Selling my BMW X5 2020 model with only 30,000km. Full service history, no accidents.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span class="price">€45,000</span>
-              <span class="text-muted">Limassol</span>
+      <!-- Filters Sidebar -->
+      <div class="col-lg-3">
+        <div class="filters-sidebar">
+          <div class="filters-header mb-4">
+            <h3>Filters</h3>
+            <button class="btn btn-link text-primary">Clear All</button>
+          </div>
+
+          <!-- Price Range -->
+          <div class="filter-section mb-4">
+            <h4>Price Range</h4>
+            <div class="price-inputs d-flex gap-2">
+              <input type="number" class="form-control" placeholder="Min">
+              <input type="number" class="form-control" placeholder="Max">
             </div>
           </div>
+
+          <!-- Location -->
+          <div class="filter-section mb-4">
+            <h4>Location</h4>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="nicosia">
+              <label class="form-check-label" for="nicosia">Nicosia</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="limassol">
+              <label class="form-check-label" for="limassol">Limassol</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="larnaca">
+              <label class="form-check-label" for="larnaca">Larnaca</label>
+            </div>
+          </div>
+
+          <!-- Condition -->
+          <div class="filter-section mb-4">
+            <h4>Condition</h4>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="new">
+              <label class="form-check-label" for="new">New</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="used">
+              <label class="form-check-label" for="used">Used</label>
+            </div>
+          </div>
+
+          <!-- Date Posted -->
+          <div class="filter-section mb-4">
+            <h4>Date Posted</h4>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="datePosted" id="today">
+              <label class="form-check-label" for="today">Today</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="datePosted" id="week">
+              <label class="form-check-label" for="week">This Week</label>
+            </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="datePosted" id="month">
+              <label class="form-check-label" for="month">This Month</label>
+            </div>
+          </div>
+
+          <button class="btn btn-primary w-100">Apply Filters</button>
         </div>
       </div>
 
-      <!-- Listing 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card listing-card h-100">
-          <img src="images/real-estate-listing.svg" class="card-img-top" alt="Beachfront Apartment">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary">Real Estate</span>
-              <span class="text-muted small">1 day ago</span>
+      <!-- Listings Grid -->
+      <div class="col-lg-9">
+        <!-- Sort Options -->
+        <div class="sort-options d-flex justify-content-between align-items-center mb-4">
+          <div class="results-count">
+            Showing <strong>24</strong> results
+          </div>
+          <div class="sort-dropdown">
+            <select class="form-select">
+              <option>Most Recent</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Most Popular</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Listings Grid -->
+        <div class="row g-4">
+          <!-- Property Listing -->
+          <div class="col-md-6">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Modern Villa in Limassol" class="img-fluid">
+                <span class="listing-badge">Featured</span>
+              </div>
+              <div class="listing-content p-3">
+                <div class="listing-category text-primary mb-2">Real Estate</div>
+                <h3 class="listing-title">Modern Villa in Limassol</h3>
+                <p class="listing-description">Beautiful 4-bedroom villa with sea view and private pool</p>
+                <div class="listing-meta d-flex justify-content-between align-items-center">
+                  <span class="listing-price">€850,000</span>
+                  <span class="listing-location"><i class="bi bi-geo-alt"></i> Limassol</span>
+                </div>
+                <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                  <span class="listing-date">Posted 2 days ago</span>
+                  <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+                </div>
+              </div>
             </div>
-            <h5 class="card-title">Beachfront Apartment for Rent</h5>
-            <p class="card-text">Beautiful 2-bedroom apartment with direct sea view. Fully furnished with all amenities.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span class="price">€1,200/month</span>
-              <span class="text-muted">Larnaca</span>
+          </div>
+
+          <!-- Vehicle Listing -->
+          <div class="col-md-6">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Tesla Model 3" class="img-fluid">
+                <span class="listing-badge">New</span>
+              </div>
+              <div class="listing-content p-3">
+                <div class="listing-category text-primary mb-2">Vehicles</div>
+                <h3 class="listing-title">Tesla Model 3 2023</h3>
+                <p class="listing-description">Electric vehicle with autopilot and premium interior</p>
+                <div class="listing-meta d-flex justify-content-between align-items-center">
+                  <span class="listing-price">€45,000</span>
+                  <span class="listing-location"><i class="bi bi-geo-alt"></i> Nicosia</span>
+                </div>
+                <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                  <span class="listing-date">Posted 1 day ago</span>
+                  <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electronics Listing -->
+          <div class="col-md-6">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1070&q=80" alt="iPhone 14 Pro" class="img-fluid">
+                <span class="listing-badge">Hot</span>
+              </div>
+              <div class="listing-content p-3">
+                <div class="listing-category text-primary mb-2">Electronics</div>
+                <h3 class="listing-title">iPhone 14 Pro Max</h3>
+                <p class="listing-description">Brand new, sealed with 1-year warranty</p>
+                <div class="listing-meta d-flex justify-content-between align-items-center">
+                  <span class="listing-price">€1,200</span>
+                  <span class="listing-location"><i class="bi bi-geo-alt"></i> Larnaca</span>
+                </div>
+                <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                  <span class="listing-date">Posted 3 hours ago</span>
+                  <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Furniture Listing -->
+          <div class="col-md-6">
+            <div class="listing-card">
+              <div class="listing-image">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1070&q=80" alt="Modern Sofa Set" class="img-fluid">
+                <span class="listing-badge">Sale</span>
+              </div>
+              <div class="listing-content p-3">
+                <div class="listing-category text-primary mb-2">Furniture</div>
+                <h3 class="listing-title">Modern Sofa Set</h3>
+                <p class="listing-description">3-piece leather sofa set in excellent condition</p>
+                <div class="listing-meta d-flex justify-content-between align-items-center">
+                  <span class="listing-price">€800</span>
+                  <span class="listing-location"><i class="bi bi-geo-alt"></i> Limassol</span>
+                </div>
+                <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                  <span class="listing-date">Posted 5 days ago</span>
+                  <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Listing 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card listing-card h-100">
-          <img src="images/electronics-listing.svg" class="card-img-top" alt="MacBook Pro">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="badge bg-primary">Electronics</span>
-              <span class="text-muted small">Just now</span>
-            </div>
-            <h5 class="card-title">MacBook Pro 16" 2021 - M1 Pro</h5>
-            <p class="card-text">Selling my MacBook Pro 16" with M1 Pro chip, 16GB RAM, 1TB SSD. Like new condition with warranty.</p>
-            <div class="d-flex justify-content-between align-items-center mt-3">
-              <span class="price">€1,800</span>
-              <span class="text-muted">Nicosia</span>
-            </div>
-          </div>
-        </div>
+        <!-- Pagination -->
+        <nav class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1"><i class="bi bi-chevron-left"></i></a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <!-- Add more listings here -->
     </div>
-
-    <!-- Pagination -->
-    <nav class="mt-4">
-      <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-          <a class="page-link" href="#" tabindex="-1">Previous</a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
-    </nav>
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>About Us</h5>
-          <p>Cyprus Classified is your trusted platform for buying and selling in Cyprus. We connect buyers and sellers across the island.</p>
+          <h5>About Cyprus Classified</h5>
+          <p>Your trusted platform for buying and selling in Cyprus. Join thousands of users who trust us for their local marketplace needs.</p>
         </div>
-        <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="col-lg-2 mb-4 mb-lg-0">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
             <li><a href="#">About Us</a></li>
@@ -195,12 +256,36 @@
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">Vehicles</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Furniture</a></li>
+          </ul>
+        </div>
         <div class="col-lg-4">
-          <h5>Connect With Us</h5>
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 Cyprus Classified. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
             <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -209,6 +294,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html> 

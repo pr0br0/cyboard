@@ -257,176 +257,266 @@
     </div>
   </section>
 
-  <!-- Featured Listings -->
-  <section class="featured-listings">
+  <!-- Featured Listings Section -->
+  <section class="featured-listings py-5">
     <div class="container">
-      <div class="section-header">
-        <h2>Featured Listings</h2>
-        <div class="section-actions">
-          <div class="nav nav-pills">
-            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#all">All</button>
-            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#properties">Properties</button>
-            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#vehicles">Vehicles</button>
-            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#jobs">Jobs</button>
-          </div>
-          <a href="listings.html" class="btn btn-outline-primary">View All</a>
-        </div>
+      <div class="section-header d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">Featured Listings</h2>
+        <a href="listings.html" class="btn btn-outline-primary">View All</a>
       </div>
-      <div class="tab-content">
-        <div class="tab-pane fade show active" id="all">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="listing-card premium">
-                <div class="listing-image">
-                  <img src="https://source.unsplash.com/800x600/?luxury,villa" alt="Luxury Villa">
-                  <span class="badge bg-primary">Premium</span>
-                  <button class="btn-favorite"><i class="bi bi-heart"></i></button>
-                </div>
-                <div class="listing-content">
-                  <div class="listing-category">
-                    <i class="bi bi-house"></i> Properties
-                  </div>
-                  <h3 class="listing-title">Luxury Villa with Pool - Limassol</h3>
-                  <p class="listing-description">5-bedroom villa with private pool, garden, and sea view. Modern amenities throughout.</p>
-                  <div class="listing-meta">
-                    <span class="price">€850,000</span>
-                    <span class="location"><i class="bi bi-geo-alt"></i> Limassol</span>
-                  </div>
-                </div>
+      <div class="row g-4">
+        <!-- Property Listing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Modern Villa in Limassol" class="img-fluid">
+              <span class="listing-badge">Featured</span>
+            </div>
+            <div class="listing-content p-3">
+              <div class="listing-category text-primary mb-2">Real Estate</div>
+              <h3 class="listing-title">Modern Villa in Limassol</h3>
+              <p class="listing-description">Beautiful 4-bedroom villa with sea view and private pool</p>
+              <div class="listing-meta d-flex justify-content-between align-items-center">
+                <span class="listing-price">€850,000</span>
+                <span class="listing-location"><i class="bi bi-geo-alt"></i> Limassol</span>
+              </div>
+              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                <span class="listing-date">Posted 2 days ago</span>
+                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
               </div>
             </div>
-            <!-- More listing cards... -->
+          </div>
+        </div>
+
+        <!-- Vehicle Listing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Tesla Model 3" class="img-fluid">
+              <span class="listing-badge">New</span>
+            </div>
+            <div class="listing-content p-3">
+              <div class="listing-category text-primary mb-2">Vehicles</div>
+              <h3 class="listing-title">Tesla Model 3 2023</h3>
+              <p class="listing-description">Electric vehicle with autopilot and premium interior</p>
+              <div class="listing-meta d-flex justify-content-between align-items-center">
+                <span class="listing-price">€45,000</span>
+                <span class="listing-location"><i class="bi bi-geo-alt"></i> Nicosia</span>
+              </div>
+              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                <span class="listing-date">Posted 1 day ago</span>
+                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electronics Listing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1070&q=80" alt="iPhone 14 Pro" class="img-fluid">
+              <span class="listing-badge">Hot</span>
+            </div>
+            <div class="listing-content p-3">
+              <div class="listing-category text-primary mb-2">Electronics</div>
+              <h3 class="listing-title">iPhone 14 Pro Max</h3>
+              <p class="listing-description">Brand new, sealed with 1-year warranty</p>
+              <div class="listing-meta d-flex justify-content-between align-items-center">
+                <span class="listing-price">€1,200</span>
+                <span class="listing-location"><i class="bi bi-geo-alt"></i> Larnaca</span>
+              </div>
+              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
+                <span class="listing-date">Posted 3 hours ago</span>
+                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section class="how-it-works">
+  <!-- Popular Categories Section -->
+  <section class="popular-categories py-5 bg-light">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>How It Works</h2>
-        <p>Start buying and selling in three simple steps</p>
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Popular Categories</h2>
+        <p class="section-subtitle">Browse through our most popular categories</p>
       </div>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="step-card">
-            <div class="step-icon">
-              <i class="bi bi-person-plus"></i>
-              <span class="step-number">1</span>
+        <!-- Real Estate -->
+        <div class="col-md-6 col-lg-3">
+          <a href="listings.html?category=real-estate" class="category-card">
+            <div class="category-icon">
+              <i class="bi bi-house-heart"></i>
             </div>
-            <h3>Create Account</h3>
-            <p>Sign up for free in minutes and start browsing thousands of listings</p>
-          </div>
+            <h3>Real Estate</h3>
+            <p>Properties for sale and rent</p>
+            <span class="category-count">1,234 Listings</span>
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="step-card">
-            <div class="step-icon">
-              <i class="bi bi-camera"></i>
-              <span class="step-number">2</span>
+
+        <!-- Vehicles -->
+        <div class="col-md-6 col-lg-3">
+          <a href="listings.html?category=vehicles" class="category-card">
+            <div class="category-icon">
+              <i class="bi bi-car-front"></i>
             </div>
-            <h3>Post Your Ad</h3>
-            <p>Add photos, description and set your price in our easy-to-use platform</p>
-          </div>
+            <h3>Vehicles</h3>
+            <p>New and used cars</p>
+            <span class="category-count">890 Listings</span>
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="step-card">
-            <div class="step-icon">
-              <i class="bi bi-chat-dots"></i>
-              <span class="step-number">3</span>
+
+        <!-- Electronics -->
+        <div class="col-md-6 col-lg-3">
+          <a href="listings.html?category=electronics" class="category-card">
+            <div class="category-icon">
+              <i class="bi bi-phone"></i>
             </div>
-            <h3>Make a Deal</h3>
-            <p>Connect with buyers or sellers and complete your transaction safely</p>
-          </div>
+            <h3>Electronics</h3>
+            <p>Gadgets and tech</p>
+            <span class="category-count">567 Listings</span>
+          </a>
         </div>
-      </div>
-      <div class="text-center mt-5">
-        <a href="post-ad.html" class="btn btn-primary btn-lg">Start Selling Now</a>
+
+        <!-- Jobs -->
+        <div class="col-md-6 col-lg-3">
+          <a href="listings.html?category=jobs" class="category-card">
+            <div class="category-icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h3>Jobs</h3>
+            <p>Career opportunities</p>
+            <span class="category-count">432 Listings</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Popular Locations -->
-  <section class="popular-locations">
+  <!-- Featured Locations Section -->
+  <section class="featured-locations py-5">
     <div class="container">
-      <div class="section-header">
-        <h2>Popular Locations</h2>
-        <p>Find items for sale in your area</p>
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">Popular Locations</h2>
+        <p class="section-subtitle">Find listings in your preferred area</p>
       </div>
       <div class="row g-4">
-        <div class="col-md-3">
-          <a href="#" class="location-card">
-            <img src="https://source.unsplash.com/800x600/?nicosia,cyprus" alt="Nicosia">
+        <!-- Nicosia -->
+        <div class="col-md-4">
+          <div class="location-card">
+            <img src="images/nicosia.svg" alt="Nicosia" class="location-image">
             <div class="location-content">
               <h3>Nicosia</h3>
-              <span>457 listings</span>
+              <p>Capital city with diverse listings</p>
+              <a href="listings.html?location=nicosia" class="btn btn-outline-primary">Browse Nicosia</a>
             </div>
-          </a>
+          </div>
         </div>
-        <div class="col-md-3">
-          <a href="#" class="location-card">
-            <img src="https://source.unsplash.com/800x600/?limassol,cyprus" alt="Limassol">
+
+        <!-- Limassol -->
+        <div class="col-md-4">
+          <div class="location-card">
+            <img src="images/limassol.svg" alt="Limassol" class="location-image">
             <div class="location-content">
               <h3>Limassol</h3>
-              <span>623 listings</span>
+              <p>Coastal city with luxury properties</p>
+              <a href="listings.html?location=limassol" class="btn btn-outline-primary">Browse Limassol</a>
             </div>
-          </a>
+          </div>
         </div>
-        <div class="col-md-3">
-          <a href="#" class="location-card">
-            <img src="https://source.unsplash.com/800x600/?larnaca,cyprus" alt="Larnaca">
+
+        <!-- Larnaca -->
+        <div class="col-md-4">
+          <div class="location-card">
+            <img src="images/larnaca.svg" alt="Larnaca" class="location-image">
             <div class="location-content">
               <h3>Larnaca</h3>
-              <span>384 listings</span>
+              <p>Historic city with modern amenities</p>
+              <a href="listings.html?location=larnaca" class="btn btn-outline-primary">Browse Larnaca</a>
             </div>
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="#" class="location-card">
-            <img src="https://source.unsplash.com/800x600/?paphos,cyprus" alt="Paphos">
-            <div class="location-content">
-              <h3>Paphos</h3>
-              <span>295 listings</span>
-            </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Download App -->
-  <section class="download-app">
+  <!-- Testimonials Section -->
+  <section class="testimonials py-5 bg-light">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <h2>Get the Cyprus Classified App</h2>
-          <p>Download our app to buy and sell on the go. Available for iOS and Android.</p>
-          <div class="app-buttons">
-            <a href="#" class="app-button">
-              <img src="images/app-store.svg" alt="Download on App Store">
-            </a>
-            <a href="#" class="app-button">
-              <img src="images/google-play.svg" alt="Get it on Google Play">
-            </a>
-          </div>
-          <div class="app-features">
-            <div class="feature">
-              <i class="bi bi-bell"></i>
-              <span>Instant Notifications</span>
+      <div class="section-header text-center mb-5">
+        <h2 class="section-title">What Our Users Say</h2>
+        <p class="section-subtitle">Trusted by thousands of users across Cyprus</p>
+      </div>
+      <div class="row g-4">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="bi bi-quote"></i>
+              <p>"Found my dream apartment in Limassol through Cyprus Classified. The process was smooth and professional."</p>
             </div>
-            <div class="feature">
-              <i class="bi bi-chat"></i>
-              <span>Chat with Sellers</span>
-            </div>
-            <div class="feature">
-              <i class="bi bi-camera"></i>
-              <span>Quick Photo Upload</span>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/150?img=1" alt="User" class="author-image">
+              <div class="author-info">
+                <h4>Maria K.</h4>
+                <p>Property Buyer</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <img src="images/app-preview.png" alt="App Preview" class="app-preview">
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="bi bi-quote"></i>
+              <p>"Sold my car within a week! The platform is user-friendly and reaches a wide audience."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/150?img=2" alt="User" class="author-image">
+              <div class="author-info">
+                <h4>Andreas P.</h4>
+                <p>Vehicle Seller</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <i class="bi bi-quote"></i>
+              <p>"Found my current job through Cyprus Classified. The job listings are always up to date."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/150?img=3" alt="User" class="author-image">
+              <div class="author-info">
+                <h4>Sophia M.</h4>
+                <p>Job Seeker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2 class="cta-title">Ready to Buy or Sell?</h2>
+          <p class="cta-text">Join thousands of users who trust Cyprus Classified for their buying and selling needs.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="post-ad.html" class="btn btn-primary btn-lg">
+            <i class="bi bi-plus-circle"></i> Post an Ad
+          </a>
         </div>
       </div>
     </div>

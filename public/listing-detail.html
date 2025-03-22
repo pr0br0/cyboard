@@ -3,41 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMW X5 2020 - Excellent Condition | Cyprus Classified</title>
+  <title>Modern Villa in Limassol - Cyprus Classified</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles/main.css">
-  <style>
-    .gallery-image {
-      height: 600px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .thumbnail {
-      cursor: pointer;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-    .thumbnail:hover, .thumbnail.active {
-      opacity: 1;
-    }
-    .seller-info {
-      border-radius: 8px;
-      box-shadow: var(--box-shadow);
-    }
-    .specs-list li {
-      margin-bottom: 10px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .specs-list li:last-child {
-      border-bottom: none;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
-  <nav class="navbar navbar-expand-lg bg-white">
+  <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <i class="bi bi-house-heart-fill"></i> Cyprus Classified
@@ -46,322 +20,252 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a href="#" class="nav-link"><i class="bi bi-geo-alt"></i> Location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="listings.html">Browse</a>
+            <a href="#" class="nav-link"><i class="bi bi-bell"></i> Alerts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post-ad.html">Post Ad</a>
+            <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary" id="registerBtn">Register</button>
           </li>
         </ul>
-        <div class="d-flex">
-          <button class="btn me-2" id="loginBtn">Login</button>
-          <button class="btn btn-primary rounded-pill" id="registerBtn">Register</button>
-        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Breadcrumb -->
-  <div class="bg-white border-bottom">
-    <div class="container py-2">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0 py-2">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="listings.html">Browse</a></li>
-          <li class="breadcrumb-item"><a href="#">Vehicles</a></li>
-          <li class="breadcrumb-item active" aria-current="page">BMW X5 2020</li>
-        </ol>
-      </nav>
-    </div>
-  </div>
-
   <!-- Main Content -->
-  <div class="container py-4">
+  <div class="container py-5">
+    <!-- Breadcrumb -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="listings.html?category=real-estate">Real Estate</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Modern Villa in Limassol</li>
+      </ol>
+    </nav>
+
     <div class="row">
-      <!-- Left Column - Listing Details -->
-      <div class="col-lg-8 mb-4">
-        <!-- Listing Title & Meta -->
-        <div class="mb-4">
-          <div class="d-flex align-items-center mb-2">
-            <span class="badge bg-primary me-2">Vehicles</span>
-            <span class="text-muted small">Posted 2 days ago</span>
-            <span class="ms-auto text-muted small"><i class="bi bi-eye"></i> 124 views</span>
+      <!-- Listing Images -->
+      <div class="col-lg-8">
+        <div class="listing-gallery">
+          <div class="main-image mb-3">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Modern Villa" class="img-fluid rounded">
           </div>
-          <h1 class="mb-2">BMW X5 2020 - Excellent Condition</h1>
-          <div class="d-flex align-items-center">
-            <span class="me-3"><i class="bi bi-geo-alt"></i> Limassol</span>
-            <span class="me-3"><i class="bi bi-share"></i> Share</span>
-            <span><i class="bi bi-bookmark"></i> Save</span>
+          <div class="thumbnail-grid d-flex gap-2">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Thumbnail 1" class="img-thumbnail">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c153aee9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Thumbnail 2" class="img-thumbnail">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Thumbnail 3" class="img-thumbnail">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Thumbnail 4" class="img-thumbnail">
           </div>
         </div>
-        
-        <!-- Gallery -->
-        <div class="mb-4">
-          <div class="mb-3">
-            <img src="https://via.placeholder.com/1200x800?text=BMW+X5+Main+Photo" alt="BMW X5 2020" class="img-fluid gallery-image w-100">
-          </div>
-          <div class="row g-2">
-            <div class="col-3">
-              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Front" alt="BMW X5 Front" class="img-fluid rounded thumbnail active">
-            </div>
-            <div class="col-3">
-              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Side" alt="BMW X5 Side" class="img-fluid rounded thumbnail">
-            </div>
-            <div class="col-3">
-              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Rear" alt="BMW X5 Rear" class="img-fluid rounded thumbnail">
-            </div>
-            <div class="col-3">
-              <img src="https://via.placeholder.com/300x200?text=BMW+X5+Interior" alt="BMW X5 Interior" class="img-fluid rounded thumbnail">
-            </div>
-          </div>
-        </div>
-        
-        <!-- Price -->
-        <div class="card mb-4">
-          <div class="card-body">
-            <h2 class="price text-primary">€45,000</h2>
-          </div>
-        </div>
-        
-        <!-- Details -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="mb-0">Details</h5>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="specs-list list-unstyled">
-                  <li><strong>Brand:</strong> BMW</li>
-                  <li><strong>Model:</strong> X5</li>
-                  <li><strong>Year:</strong> 2020</li>
-                  <li><strong>Body Type:</strong> SUV</li>
-                  <li><strong>Transmission:</strong> Automatic</li>
-                </ul>
+
+        <!-- Listing Details -->
+        <div class="listing-details mt-4">
+          <div class="d-flex justify-content-between align-items-start mb-4">
+            <div>
+              <h1 class="listing-title">Modern Villa in Limassol</h1>
+              <div class="listing-meta">
+                <span class="listing-location"><i class="bi bi-geo-alt"></i> Limassol, Cyprus</span>
+                <span class="listing-date ms-3"><i class="bi bi-clock"></i> Posted 2 days ago</span>
               </div>
-              <div class="col-md-6">
-                <ul class="specs-list list-unstyled">
-                  <li><strong>Fuel Type:</strong> Diesel</li>
-                  <li><strong>Engine Size:</strong> 3.0L</li>
-                  <li><strong>Mileage:</strong> 30,000 km</li>
-                  <li><strong>Color:</strong> Black</li>
-                  <li><strong>Registration:</strong> Cyprus Registered</li>
-                </ul>
+            </div>
+            <div class="listing-price">€850,000</div>
+          </div>
+
+          <div class="listing-features mb-4">
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div class="feature-item">
+                  <i class="bi bi-house-door"></i>
+                  <span>4 Bedrooms</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-item">
+                  <i class="bi bi-droplet"></i>
+                  <span>3 Bathrooms</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-item">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                  <span>250 m²</span>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="feature-item">
+                  <i class="bi bi-car-front"></i>
+                  <span>2 Parking</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        
-        <!-- Description -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="mb-0">Description</h5>
-          </div>
-          <div class="card-body">
-            <p>Selling my BMW X5 2020 model with only 30,000km. Full service history, no accidents.</p>
-            <p>This is the xDrive30d model with the M Sport package. It comes with a host of features including:</p>
+
+          <div class="listing-description mb-4">
+            <h3>Description</h3>
+            <p>This stunning modern villa offers luxurious living with breathtaking sea views. The property features:</p>
             <ul>
-              <li>Panoramic sunroof</li>
-              <li>Head-up display</li>
-              <li>Harman Kardon sound system</li>
-              <li>Adaptive cruise control</li>
-              <li>Lane keeping assist</li>
-              <li>Parking assistant with 360° camera</li>
-              <li>Heated and ventilated seats</li>
-              <li>BMW Live Cockpit Professional</li>
+              <li>Spacious open-plan living area with floor-to-ceiling windows</li>
+              <li>Modern kitchen with high-end appliances</li>
+              <li>Master bedroom with en-suite bathroom and walk-in closet</li>
+              <li>Infinity pool overlooking the Mediterranean Sea</li>
+              <li>Landscaped garden with outdoor dining area</li>
+              <li>Smart home technology integration</li>
+              <li>24/7 security system</li>
             </ul>
-            <p>The vehicle has been meticulously maintained and is still under BMW warranty until March 2024. All services have been done at the official BMW dealership.</p>
-            <p>Reason for selling: Upgrading to a newer model.</p>
-            <p>Serious inquiries only please. Viewings available on weekends or after 6pm on weekdays.</p>
           </div>
-        </div>
-        
-        <!-- Location -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="mb-0">Location</h5>
-          </div>
-          <div class="card-body">
-            <p><i class="bi bi-geo-alt"></i> Limassol, Cyprus</p>
-            <img src="https://via.placeholder.com/800x300?text=Map+of+Limassol" alt="Map" class="img-fluid rounded">
+
+          <!-- Location Map -->
+          <div class="listing-map mb-4">
+            <h3>Location</h3>
+            <div class="map-container">
+              <!-- Replace with actual map integration -->
+              <img src="https://maps.googleapis.com/maps/api/staticmap?center=34.6787,33.0444&zoom=15&size=600x400&key=YOUR_API_KEY" alt="Location Map" class="img-fluid rounded">
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- Right Column - Seller Info & Similar Listings -->
+
+      <!-- Sidebar -->
       <div class="col-lg-4">
-        <!-- Seller Information -->
-        <div class="card seller-info mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Seller Information</h5>
-            <div class="d-flex align-items-center mb-3">
-              <div class="me-3">
-                <img src="https://via.placeholder.com/60x60" alt="Seller" class="rounded-circle">
-              </div>
-              <div>
-                <h6 class="mb-1">John Doe</h6>
-                <p class="text-muted small mb-0">Member since Jan 2022</p>
+        <!-- Seller Info -->
+        <div class="seller-card mb-4">
+          <div class="seller-header d-flex align-items-center mb-3">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Seller" class="seller-image rounded-circle me-3">
+            <div>
+              <h4 class="seller-name mb-0">John Smith</h4>
+              <div class="seller-rating">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <span class="ms-2">(4.5)</span>
               </div>
             </div>
-            <div class="d-grid gap-2">
-              <button class="btn btn-primary"><i class="bi bi-telephone"></i> Show Phone Number</button>
-              <button class="btn btn-outline-primary"><i class="bi bi-chat"></i> Send Message</button>
+          </div>
+          <div class="seller-stats d-flex justify-content-around mb-3">
+            <div class="stat-item text-center">
+              <div class="stat-number">24</div>
+              <div class="stat-label">Listings</div>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-number">98%</div>
+              <div class="stat-label">Response Rate</div>
+            </div>
+            <div class="stat-item text-center">
+              <div class="stat-number">2h</div>
+              <div class="stat-label">Avg. Response</div>
             </div>
           </div>
-        </div>
-        
-        <!-- Safety Tips -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="mb-0">Safety Tips</h5>
-          </div>
-          <div class="card-body">
-            <ul class="list-unstyled mb-0">
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Meet in a public place</li>
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Check the item before buying</li>
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Pay only after inspecting the item</li>
-              <li><i class="bi bi-check-circle text-success me-2"></i> <a href="#">More safety tips</a></li>
-            </ul>
+          <div class="seller-actions">
+            <button class="btn btn-primary w-100 mb-2">
+              <i class="bi bi-telephone"></i> Call Now
+            </button>
+            <button class="btn btn-outline-primary w-100 mb-2">
+              <i class="bi bi-chat"></i> Send Message
+            </button>
+            <button class="btn btn-outline-primary w-100">
+              <i class="bi bi-share"></i> Share Listing
+            </button>
           </div>
         </div>
-        
+
         <!-- Similar Listings -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="mb-0">Similar Listings</h5>
-          </div>
-          <div class="card-body p-0">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="d-flex">
-                  <div class="me-3">
-                    <img src="https://via.placeholder.com/80x60?text=Audi+Q7" alt="Audi Q7" class="rounded">
-                  </div>
-                  <div>
-                    <h6 class="mb-1">Audi Q7 2021</h6>
-                    <p class="text-primary mb-1">€52,000</p>
-                    <small class="text-muted">Nicosia</small>
-                  </div>
+        <div class="similar-listings">
+          <h3>Similar Properties</h3>
+          <div class="similar-listing-card mb-3">
+            <div class="row g-0">
+              <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c153aee9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Similar Property" class="img-fluid">
+              </div>
+              <div class="col-8">
+                <div class="similar-listing-content p-2">
+                  <h5>Luxury Apartment</h5>
+                  <p class="mb-1">€750,000</p>
+                  <small class="text-muted">3 beds • 2 baths</small>
                 </div>
-              </li>
-              <li class="list-group-item">
-                <div class="d-flex">
-                  <div class="me-3">
-                    <img src="https://via.placeholder.com/80x60?text=Mercedes+GLE" alt="Mercedes GLE" class="rounded">
-                  </div>
-                  <div>
-                    <h6 class="mb-1">Mercedes GLE 2019</h6>
-                    <p class="text-primary mb-1">€41,500</p>
-                    <small class="text-muted">Limassol</small>
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item">
-                <div class="d-flex">
-                  <div class="me-3">
-                    <img src="https://via.placeholder.com/80x60?text=Range+Rover" alt="Range Rover" class="rounded">
-                  </div>
-                  <div>
-                    <h6 class="mb-1">Range Rover Sport 2020</h6>
-                    <p class="text-primary mb-1">€58,000</p>
-                    <small class="text-muted">Paphos</small>
-                  </div>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <div class="card-footer text-center">
-            <a href="listings.html" class="text-decoration-none">View more</a>
+          <div class="similar-listing-card mb-3">
+            <div class="row g-0">
+              <div class="col-4">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Similar Property" class="img-fluid">
+              </div>
+              <div class="col-8">
+                <div class="similar-listing-content p-2">
+                  <h5>Beachfront Villa</h5>
+                  <p class="mb-1">€950,000</p>
+                  <small class="text-muted">5 beds • 4 baths</small>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <!-- Report Listing -->
-        <div class="text-center">
-          <a href="#" class="text-muted small"><i class="bi bi-flag"></i> Report this listing</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="mt-5">
+  <footer class="footer py-5 bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <h5>Cyprus Classified</h5>
-          <p>The easiest way to buy and sell across Cyprus. Join our community today!</p>
-          <div class="social-links mt-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h5>About Cyprus Classified</h5>
+          <p>Your trusted platform for buying and selling in Cyprus. Join thousands of users who trust us for their local marketplace needs.</p>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">Vehicles</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Furniture</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 Cyprus Classified. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="social-links">
             <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
             <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
             <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
-        </div>
-        <div class="col-md-2 offset-md-1 mb-4 mb-md-0">
-          <h5>Categories</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#">Vehicles</a></li>
-            <li class="mb-2"><a href="#">Real Estate</a></li>
-            <li class="mb-2"><a href="#">Electronics</a></li>
-            <li class="mb-2"><a href="#">Jobs</a></li>
-            <li class="mb-2"><a href="#">Services</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 mb-4 mb-md-0">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li class="mb-2"><a href="#">About Us</a></li>
-            <li class="mb-2"><a href="#">Contact</a></li>
-            <li class="mb-2"><a href="#">Privacy Policy</a></li>
-            <li class="mb-2"><a href="#">Terms of Use</a></li>
-            <li class="mb-2"><a href="#">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>Contact Us</h5>
-          <address class="mb-0">
-            <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Main Street, Nicosia, Cyprus</p>
-            <p class="mb-2"><i class="bi bi-telephone me-2"></i> +357 22 123456</p>
-            <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@cyprusclassified.com</p>
-          </address>
-        </div>
-      </div>
-      <hr class="mt-4 mb-4">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="mb-0">&copy; 2023 Cyprus Classified. All rights reserved.</p>
-        </div>
-        <div class="col-md-6 text-md-end">
-          <p class="mb-0">Made with <i class="bi bi-heart-fill text-danger"></i> in Cyprus</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    // Image gallery functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const thumbnails = document.querySelectorAll('.thumbnail');
-      const mainImg = document.querySelector('.gallery-image');
-      
-      thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
-          // Update main image
-          mainImg.src = this.src.replace('300x200', '1200x800');
-          
-          // Update active state
-          thumbnails.forEach(t => t.classList.remove('active'));
-          this.classList.add('active');
-        });
-      });
-    });
-  </script>
 </body>
 </html> 
