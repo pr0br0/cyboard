@@ -28,7 +28,12 @@ const io = new Server(httpServer, {
 app.use(helmet());
 app.use(compression());
 app.use(morgan('dev'));
-app.use(cors());
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || 'https://cyboard.netlify.app',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
