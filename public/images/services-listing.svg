@@ -1,0 +1,8 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#2ecc71" opacity="0.1"/>
+  <circle cx="200" cy="80" r="40" fill="#2ecc71" opacity="0.3"/>
+  <path d="M180,80 L220,80 M200,60 L200,100" stroke="#2c3e50" stroke-width="4"/>
+  <rect x="140" y="130" width="120" height="20" rx="5" fill="#2ecc71" opacity="0.5"/>
+  <rect x="160" y="160" width="80" height="10" rx="5" fill="#2ecc71" opacity="0.3"/>
+  <text x="200" y="145" font-family="Arial" font-size="14" text-anchor="middle" fill="#2c3e50">Services</text>
+</svg> 

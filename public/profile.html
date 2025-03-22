@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Cyprus Classified</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-home"></i> Cyprus Classified
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-listing.html">
+                            <i class="fas fa-plus-circle"></i> Post Ad
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> John Doe
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                            <li><a class="dropdown-item" href="messages.html">Messages</a></li>
+                            <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body text-center">
+                        <img src="https://via.placeholder.com/100" alt="Profile" class="rounded-circle mb-3">
+                        <h5 class="card-title mb-1">John Doe</h5>
+                        <p class="text-muted mb-3">Member since Jan 2024</p>
+                        <div class="d-grid">
+                            <a href="create-listing.html" class="btn btn-primary">
+                                <i class="fas fa-plus-circle me-2"></i> Post New Ad
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="list-group list-group-flush">
+                        <a href="#profile" class="list-group-item list-group-item-action active" data-bs-toggle="list">
+                            <i class="fas fa-user me-2"></i> Profile
+                        </a>
+                        <a href="#listings" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                            <i class="fas fa-list me-2"></i> My Listings
+                        </a>
+                        <a href="#messages" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                            <i class="fas fa-envelope me-2"></i> Messages
+                            <span class="badge bg-primary rounded-pill float-end">3</span>
+                        </a>
+                        <a href="#saved" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                            <i class="fas fa-heart me-2"></i> Saved Listings
+                        </a>
+                        <a href="#settings" class="list-group-item list-group-item-action" data-bs-toggle="list">
+                            <i class="fas fa-cog me-2"></i> Settings
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <!-- Profile Tab -->
+                    <div class="tab-pane fade show active" id="profile">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Profile Information</h4>
+                                <form id="profileForm">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" value="John">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" value="Doe">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" value="john@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" value="+357 99 123456">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Location</label>
+                                        <select class="form-select">
+                                            <option>Limassol</option>
+                                            <option>Nicosia</option>
+                                            <option>Larnaca</option>
+                                            <option>Paphos</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Bio</label>
+                                        <textarea class="form-control" rows="3">I'm a real estate agent specializing in luxury properties in Cyprus.</textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Listings Tab -->
+                    <div class="tab-pane fade" id="listings">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h4 class="card-title mb-0">My Listings</h4>
+                                    <a href="create-listing.html" class="btn btn-primary">
+                                        <i class="fas fa-plus-circle me-2"></i> New Listing
+                                    </a>
+                                </div>
+
+                                <!-- Listing Items -->
+                                <div class="row g-4">
+                                    <!-- Active Listing -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Property">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <h5 class="card-title">Modern Villa in Limassol</h5>
+                                                    <span class="badge bg-success">Active</span>
+                                                </div>
+                                                <p class="card-text text-muted">Posted on Jan 15, 2024</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="h5 mb-0">€850,000</span>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Pending Listing -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Property">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-start">
+                                                    <h5 class="card-title">Luxury Apartment in Nicosia</h5>
+                                                    <span class="badge bg-warning">Pending</span>
+                                                </div>
+                                                <p class="card-text text-muted">Posted on Jan 10, 2024</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="h5 mb-0">€450,000</span>
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                        <button class="btn btn-sm btn-outline-danger">Delete</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages Tab -->
+                    <div class="tab-pane fade" id="messages">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Messages</h4>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Sarah Johnson</h6>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                        <p class="mb-1">Hi, I'm interested in the Modern Villa in Limassol...</p>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Michael Brown</h6>
+                                            <small class="text-muted">1 week ago</small>
+                                        </div>
+                                        <p class="mb-1">Could you provide more details about the apartment?</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saved Listings Tab -->
+                    <div class="tab-pane fade" id="saved">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Saved Listings</h4>
+                                <div class="row g-4">
+                                    <!-- Saved Listing -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Property">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Beachfront Villa in Paphos</h5>
+                                                <p class="card-text text-muted">Posted by Alex Smith</p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span class="h5 mb-0">€1,200,000</span>
+                                                    <button class="btn btn-sm btn-outline-danger">
+                                                        <i class="fas fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-pane fade" id="settings">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4">Account Settings</h4>
+                                <form id="settingsForm">
+                                    <div class="mb-4">
+                                        <h5 class="mb-3">Change Password</h5>
+                                        <div class="mb-3">
+                                            <label class="form-label">Current Password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">New Password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirm New Password</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Update Password</button>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <h5 class="mb-3">Notification Settings</h5>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" checked>
+                                            <label class="form-check-label">Email notifications for new messages</label>
+                                        </div>
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" checked>
+                                            <label class="form-check-label">Email notifications for listing updates</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">Newsletter subscription</label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h5 class="mb-3">Account Deletion</h5>
+                                        <p class="text-muted mb-3">Once you delete your account, there is no going back. Please be certain.</p>
+                                        <button type="button" class="btn btn-danger">Delete Account</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Cyprus Classified is your trusted platform for buying and selling in Cyprus.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Cyprus Classified. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form submission handlers
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your profile update logic here
+            console.log('Profile form submitted');
+        });
+
+        document.getElementById('settingsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your settings update logic here
+            console.log('Settings form submitted');
+        });
+    </script>
+</body>
+</html> 

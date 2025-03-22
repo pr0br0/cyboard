@@ -1,0 +1,31 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2c3e50" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="200" fill="url(#cityGradient)"/>
+  
+  <!-- City skyline -->
+  <rect x="50" y="80" width="30" height="120" fill="#2c3e50"/>
+  <rect x="90" y="100" width="30" height="100" fill="#2c3e50"/>
+  <rect x="130" y="60" width="40" height="140" fill="#2c3e50"/>
+  <rect x="180" y="90" width="30" height="110" fill="#2c3e50"/>
+  <rect x="220" y="70" width="50" height="130" fill="#2c3e50"/>
+  <rect x="280" y="110" width="30" height="90" fill="#2c3e50"/>
+  <rect x="320" y="80" width="30" height="120" fill="#2c3e50"/>
+  
+  <!-- Windows -->
+  <rect x="55" y="90" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  <rect x="55" y="110" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  <rect x="55" y="130" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  <rect x="55" y="150" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  
+  <rect x="95" y="110" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  <rect x="95" y="130" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  <rect x="95" y="150" width="20" height="10" fill="#f1c40f" opacity="0.7"/>
+  
+  <text x="200" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="white" font-weight="bold">Nicosia</text>
+</svg> 

@@ -1,0 +1,27 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="beachGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3498db" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2c3e50" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="200" fill="url(#beachGradient)"/>
+  
+  <!-- Beach and sea -->
+  <rect x="0" y="150" width="400" height="50" fill="#f1c40f" opacity="0.7"/>
+  <path d="M0,150 C50,140 100,160 150,145 C200,130 250,150 300,140 C350,130 400,150 400,150 L400,200 L0,200 Z" fill="#f1c40f" opacity="0.5"/>
+  
+  <!-- Buildings -->
+  <rect x="50" y="100" width="30" height="50" fill="#2c3e50"/>
+  <rect x="100" y="80" width="40" height="70" fill="#2c3e50"/>
+  <rect x="160" y="60" width="30" height="90" fill="#2c3e50"/>
+  <rect x="210" y="90" width="50" height="60" fill="#2c3e50"/>
+  <rect x="280" y="70" width="30" height="80" fill="#2c3e50"/>
+  <rect x="330" y="110" width="40" height="40" fill="#2c3e50"/>
+  
+  <!-- Sun -->
+  <circle cx="350" cy="50" r="30" fill="#f1c40f" opacity="0.8"/>
+  
+  <text x="200" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="white" font-weight="bold">Limassol</text>
+</svg> 
