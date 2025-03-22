@@ -1,63 +1,35 @@
 # Dependencies
 node_modules/
 package-lock.json
-npm-debug.log
-yarn-error.log
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-.env.development
-.env.test
-.env.production
 
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# IDE - WebStorm/IntelliJ
-.idea/
+# Build output
+dist/
+build/
+.netlify/
 
 # Logs
 logs/
 *.log
+npm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 
-# Directory for uploaded files
-uploads/
+# OS
+.DS_Store
+Thumbs.db
 
 # Testing
 coverage/
 
-# Production build
-build/
-dist/
-
-# Misc
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# Debug
-.debug/
-
 # Temporary files
 tmp/
 temp/
-
-# Cache directories
-.cache/
-.npm/
-
-# Optional eslint cache
-.eslintcache
