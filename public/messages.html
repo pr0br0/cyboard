@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Cyprus Classified</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-home"></i> Cyprus Classified
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create-listing.html">
+                            <i class="fas fa-plus-circle"></i> Post Ad
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle"></i> John Doe
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">My Profile</a></li>
+                            <li><a class="dropdown-item active" href="messages.html">Messages</a></li>
+                            <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Messages Section -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Conversations List -->
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <h5 class="card-title mb-0">Conversations</h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <!-- Active Conversation -->
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Sarah Johnson</h6>
+                                <small class="text-white">2m ago</small>
+                            </div>
+                            <p class="mb-1">Modern Villa in Limassol</p>
+                            <small class="text-white">Latest message preview...</small>
+                        </a>
+                        <!-- Other Conversations -->
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Michael Brown</h6>
+                                <small class="text-muted">1h ago</small>
+                            </div>
+                            <p class="mb-1">Luxury Apartment in Nicosia</p>
+                            <small class="text-muted">Latest message preview...</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Emma Wilson</h6>
+                                <small class="text-muted">2h ago</small>
+                            </div>
+                            <p class="mb-1">Beachfront Villa in Paphos</p>
+                            <small class="text-muted">Latest message preview...</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h5 class="card-title mb-0">Sarah Johnson</h5>
+                                <small class="text-muted">Modern Villa in Limassol</small>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-link text-dark" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>View Profile</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-flag me-2"></i>Report</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-ban me-2"></i>Block</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body chat-messages" style="height: 400px; overflow-y: auto;">
+                        <!-- Message History -->
+                        <div class="message received mb-3">
+                            <div class="message-content bg-light p-3 rounded">
+                                <p class="mb-0">Hi, I'm interested in the Modern Villa in Limassol. Could you provide more details about the property?</p>
+                                <small class="text-muted">2:30 PM</small>
+                            </div>
+                        </div>
+                        <div class="message sent mb-3">
+                            <div class="message-content bg-primary text-white p-3 rounded">
+                                <p class="mb-0">Hello! Of course, I'd be happy to help. The villa features 4 bedrooms, 3 bathrooms, and a private swimming pool. Would you like to schedule a viewing?</p>
+                                <small class="text-white">2:32 PM</small>
+                            </div>
+                        </div>
+                        <div class="message received mb-3">
+                            <div class="message-content bg-light p-3 rounded">
+                                <p class="mb-0">Yes, that would be great! What times are available this weekend?</p>
+                                <small class="text-muted">2:35 PM</small>
+                            </div>
+                        </div>
+                        <div class="message sent mb-3">
+                            <div class="message-content bg-primary text-white p-3 rounded">
+                                <p class="mb-0">I have slots available on Saturday at 10 AM, 2 PM, and 4 PM. Which time works best for you?</p>
+                                <small class="text-white">2:36 PM</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <form id="messageForm" class="d-flex gap-2">
+                            <input type="text" class="form-control" placeholder="Type your message...">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Cyprus Classified is your trusted platform for buying and selling in Cyprus.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Cyprus Classified. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Message form submission handler
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your message sending logic here
+            console.log('Message form submitted');
+        });
+
+        // Scroll to bottom of chat messages
+        const chatMessages = document.querySelector('.chat-messages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    </script>
+</body>
+</html> 
