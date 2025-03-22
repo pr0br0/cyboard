@@ -8,11 +8,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="styles/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    /* Inline styles for debugging */
-    body { background-color: #f8f9fa; }
-    .debug-info { padding: 10px; background-color: #e9ecef; border-radius: 5px; margin-top: 20px; }
-  </style>
 </head>
 <body>
   <!-- Header -->
@@ -27,163 +22,41 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="bi bi-geo-alt"></i> Location</a>
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#locationModal">
+              <i class="bi bi-geo-alt"></i> Location
+            </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"><i class="bi bi-bell"></i> Alerts</a>
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#alertsModal">
+              <i class="bi bi-bell"></i> Alerts
+            </a>
           </li>
           <li class="nav-item">
-            <button class="btn btn-outline-primary me-2" id="loginBtn">Login</button>
+            <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-primary" id="registerBtn">Register</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Search Section -->
-  <div class="search-section py-4">
-    <div class="container">
-      <h1 class="search-title text-center mb-4">What would you like to search?</h1>
-      <div class="search-tabs mb-4">
-        <ul class="nav nav-pills justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="#"><i class="bi bi-tag"></i> For sale</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-car-front"></i> Vehicles</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-house"></i> Real estate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-briefcase"></i> Jobs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-search"></i> Search in all categories</a>
-          </li>
-        </ul>
-      </div>
-      <div class="search-form">
-        <div class="row g-3">
-          <div class="col-lg-3">
-            <select class="form-select" id="categorySelect">
-              <option selected>All Categories</option>
-              <optgroup label="For sale">
-                <option>Animals</option>
-                <option>Art - Collectibles</option>
-                <option>Electronics</option>
-                <option>Home & Garden</option>
-                <option>Vehicles</option>
-              </optgroup>
-              <optgroup label="Real Estate">
-                <option>Houses for Sale</option>
-                <option>Apartments for Rent</option>
-                <option>Commercial Space</option>
-              </optgroup>
-              <optgroup label="Jobs">
-                <option>IT & Software</option>
-                <option>Sales & Marketing</option>
-                <option>Customer Service</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="col-lg-4">
-            <div class="input-group">
-              <span class="input-group-text"><i class="bi bi-search"></i></span>
-              <input type="text" class="form-control" placeholder="What are you looking for?">
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="input-group">
-              <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
-              <input type="text" class="form-control" placeholder="All Locations">
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <button class="btn btn-primary w-100">Search</button>
-          </div>
-        </div>
-        <div class="search-filters mt-3">
-          <div class="row g-3 align-items-center">
-            <div class="col-auto">
-              <label class="form-label mb-0">Area:</label>
-            </div>
-            <div class="col-auto">
-              <select class="form-select form-select-sm">
-                <option value="0">0 km</option>
-                <option value="20">20 km</option>
-                <option value="50">50 km</option>
-                <option value="100">100 km</option>
-              </select>
-            </div>
-            <div class="col-auto">
-              <label class="form-label mb-0">Condition:</label>
-            </div>
-            <div class="col-auto">
-              <select class="form-select form-select-sm">
-                <option>All conditions</option>
-                <option>New</option>
-                <option>Used</option>
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Category Navigation -->
-  <div class="category-nav py-2 bg-white border-bottom">
-    <div class="container">
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <i class="bi bi-tag-fill me-2"></i> For sale
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <i class="bi bi-car-front-fill me-2 text-primary"></i>
-            <span class="position-relative">
-              Vehicles
-              <span class="badge bg-danger position-absolute top-0 start-100 translate-middle-y">Hot</span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <i class="bi bi-house-door-fill me-2"></i>
-            <span class="position-relative">
-              Real estate
-              <span class="badge bg-success position-absolute top-0 start-100 translate-middle-y">New</span>
-            </span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <i class="bi bi-briefcase-fill me-2"></i> Jobs
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="#">
-            <i class="bi bi-search me-2"></i> Search in all categories
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <h1 class="hero-title">Buy & Sell in Cyprus</h1>
+          <h1 class="hero-title">Find Your Next Deal in Cyprus</h1>
           <p class="hero-subtitle">Join thousands of users who trust Cyprus Classified for local buying and selling. Find great deals or reach thousands of potential buyers.</p>
-          <div class="hero-buttons">
+          <div class="hero-search">
+            <div class="input-group input-group-lg">
+              <span class="input-group-text"><i class="bi bi-search"></i></span>
+              <input type="text" class="form-control" placeholder="What are you looking for?">
+              <button class="btn btn-primary">Search</button>
+            </div>
+          </div>
+          <div class="hero-buttons mt-4">
             <a href="post-ad.html" class="btn btn-primary btn-lg">
               <i class="bi bi-plus-circle"></i> Post an Ad
             </a>
@@ -191,251 +64,120 @@
               <i class="bi bi-search"></i> Browse Listings
             </a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <i class="bi bi-people-fill"></i>
-              <div class="stat-text">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">Active Users</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <i class="bi bi-tag-fill"></i>
-              <div class="stat-text">
-                <span class="stat-number">10K+</span>
-                <span class="stat-label">Live Ads</span>
-              </div>
-            </div>
-            <div class="stat-item">
-              <i class="bi bi-star-fill"></i>
-              <div class="stat-text">
-                <span class="stat-number">4.8</span>
-                <span class="stat-label">User Rating</span>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="col-lg-6">
-          <div class="hero-categories">
-            <div class="category-grid">
-              <a href="#" class="category-card featured">
-                <div class="category-icon">
-                  <i class="bi bi-house-heart"></i>
-                </div>
-                <h3>Properties</h3>
-                <p>Find your dream home</p>
-                <span class="category-count">1,234 Listings</span>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-icon">
-                  <i class="bi bi-car-front"></i>
-                </div>
-                <h3>Vehicles</h3>
-                <p>New & used cars</p>
-                <span class="category-count">890 Listings</span>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-icon">
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                <h3>Jobs</h3>
-                <p>Career opportunities</p>
-                <span class="category-count">567 Listings</span>
-              </a>
-              <a href="#" class="category-card">
-                <div class="category-icon">
-                  <i class="bi bi-phone"></i>
-                </div>
-                <h3>Electronics</h3>
-                <p>Gadgets & tech</p>
-                <span class="category-count">789 Listings</span>
-              </a>
-            </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Modern Home" class="img-fluid rounded-3">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Listings Section -->
-  <section class="featured-listings py-5">
-    <div class="container">
-      <div class="section-header d-flex justify-content-between align-items-center mb-4">
-        <h2 class="section-title">Featured Listings</h2>
-        <a href="listings.html" class="btn btn-outline-primary">View All</a>
-      </div>
-      <div class="row g-4">
-        <!-- Property Listing -->
-        <div class="col-md-6 col-lg-4">
-          <div class="listing-card">
-            <div class="listing-image">
-              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Modern Villa in Limassol" class="img-fluid">
-              <span class="listing-badge">Featured</span>
-            </div>
-            <div class="listing-content p-3">
-              <div class="listing-category text-primary mb-2">Real Estate</div>
-              <h3 class="listing-title">Modern Villa in Limassol</h3>
-              <p class="listing-description">Beautiful 4-bedroom villa with sea view and private pool</p>
-              <div class="listing-meta d-flex justify-content-between align-items-center">
-                <span class="listing-price">€850,000</span>
-                <span class="listing-location"><i class="bi bi-geo-alt"></i> Limassol</span>
-              </div>
-              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
-                <span class="listing-date">Posted 2 days ago</span>
-                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vehicle Listing -->
-        <div class="col-md-6 col-lg-4">
-          <div class="listing-card">
-            <div class="listing-image">
-              <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Tesla Model 3" class="img-fluid">
-              <span class="listing-badge">New</span>
-            </div>
-            <div class="listing-content p-3">
-              <div class="listing-category text-primary mb-2">Vehicles</div>
-              <h3 class="listing-title">Tesla Model 3 2023</h3>
-              <p class="listing-description">Electric vehicle with autopilot and premium interior</p>
-              <div class="listing-meta d-flex justify-content-between align-items-center">
-                <span class="listing-price">€45,000</span>
-                <span class="listing-location"><i class="bi bi-geo-alt"></i> Nicosia</span>
-              </div>
-              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
-                <span class="listing-date">Posted 1 day ago</span>
-                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Electronics Listing -->
-        <div class="col-md-6 col-lg-4">
-          <div class="listing-card">
-            <div class="listing-image">
-              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1070&q=80" alt="iPhone 14 Pro" class="img-fluid">
-              <span class="listing-badge">Hot</span>
-            </div>
-            <div class="listing-content p-3">
-              <div class="listing-category text-primary mb-2">Electronics</div>
-              <h3 class="listing-title">iPhone 14 Pro Max</h3>
-              <p class="listing-description">Brand new, sealed with 1-year warranty</p>
-              <div class="listing-meta d-flex justify-content-between align-items-center">
-                <span class="listing-price">€1,200</span>
-                <span class="listing-location"><i class="bi bi-geo-alt"></i> Larnaca</span>
-              </div>
-              <div class="listing-footer mt-3 d-flex justify-content-between align-items-center">
-                <span class="listing-date">Posted 3 hours ago</span>
-                <a href="listing-detail.html" class="btn btn-sm btn-primary">View Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Popular Categories Section -->
-  <section class="popular-categories py-5 bg-light">
+  <!-- Popular Categories -->
+  <section class="popular-categories py-5">
     <div class="container">
       <div class="section-header text-center mb-5">
-        <h2 class="section-title">Popular Categories</h2>
-        <p class="section-subtitle">Browse through our most popular categories</p>
+        <h2>Popular Categories</h2>
+        <p>Browse through our most popular categories</p>
       </div>
       <div class="row g-4">
-        <!-- Real Estate -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <a href="listings.html?category=real-estate" class="category-card">
             <div class="category-icon">
               <i class="bi bi-house-heart"></i>
             </div>
-            <h3>Real Estate</h3>
-            <p>Properties for sale and rent</p>
-            <span class="category-count">1,234 Listings</span>
+            <h3>Properties</h3>
+            <p>1,234 Listings</p>
           </a>
         </div>
-
-        <!-- Vehicles -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <a href="listings.html?category=vehicles" class="category-card">
             <div class="category-icon">
               <i class="bi bi-car-front"></i>
             </div>
             <h3>Vehicles</h3>
-            <p>New and used cars</p>
-            <span class="category-count">890 Listings</span>
+            <p>890 Listings</p>
           </a>
         </div>
-
-        <!-- Electronics -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <a href="listings.html?category=electronics" class="category-card">
             <div class="category-icon">
               <i class="bi bi-phone"></i>
             </div>
             <h3>Electronics</h3>
-            <p>Gadgets and tech</p>
-            <span class="category-count">567 Listings</span>
+            <p>567 Listings</p>
           </a>
         </div>
-
-        <!-- Jobs -->
-        <div class="col-md-6 col-lg-3">
-          <a href="listings.html?category=jobs" class="category-card">
+        <div class="col-6 col-md-4 col-lg-3">
+          <a href="listings.html?category=furniture" class="category-card">
             <div class="category-icon">
-              <i class="bi bi-briefcase"></i>
+              <i class="bi bi-house-door"></i>
             </div>
-            <h3>Jobs</h3>
-            <p>Career opportunities</p>
-            <span class="category-count">432 Listings</span>
+            <h3>Furniture</h3>
+            <p>432 Listings</p>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Locations Section -->
-  <section class="featured-locations py-5">
+  <!-- Featured Listings -->
+  <section class="featured-listings py-5 bg-light">
     <div class="container">
       <div class="section-header text-center mb-5">
-        <h2 class="section-title">Popular Locations</h2>
-        <p class="section-subtitle">Find listings in your preferred area</p>
+        <h2>Featured Listings</h2>
+        <p>Check out our most popular listings</p>
       </div>
       <div class="row g-4">
-        <!-- Nicosia -->
-        <div class="col-md-4">
-          <div class="location-card">
-            <img src="images/nicosia.svg" alt="Nicosia" class="location-image">
-            <div class="location-content">
-              <h3>Nicosia</h3>
-              <p>Capital city with diverse listings</p>
-              <a href="listings.html?location=nicosia" class="btn btn-outline-primary">Browse Nicosia</a>
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Modern Villa">
+              <span class="listing-badge">Featured</span>
+            </div>
+            <div class="listing-content">
+              <h3>Modern Villa in Limassol</h3>
+              <p class="listing-price">€850,000</p>
+              <div class="listing-meta">
+                <span><i class="bi bi-geo-alt"></i> Limassol</span>
+                <span><i class="bi bi-house-door"></i> 4 beds</span>
+              </div>
+              <a href="listing-detail.html" class="btn btn-outline-primary w-100 mt-3">View Details</a>
             </div>
           </div>
         </div>
-
-        <!-- Limassol -->
-        <div class="col-md-4">
-          <div class="location-card">
-            <img src="images/limassol.svg" alt="Limassol" class="location-image">
-            <div class="location-content">
-              <h3>Limassol</h3>
-              <p>Coastal city with luxury properties</p>
-              <a href="listings.html?location=limassol" class="btn btn-outline-primary">Browse Limassol</a>
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Luxury Apartment">
+              <span class="listing-badge">New</span>
+            </div>
+            <div class="listing-content">
+              <h3>Luxury Apartment in Nicosia</h3>
+              <p class="listing-price">€450,000</p>
+              <div class="listing-meta">
+                <span><i class="bi bi-geo-alt"></i> Nicosia</span>
+                <span><i class="bi bi-house-door"></i> 2 beds</span>
+              </div>
+              <a href="listing-detail.html" class="btn btn-outline-primary w-100 mt-3">View Details</a>
             </div>
           </div>
         </div>
-
-        <!-- Larnaca -->
-        <div class="col-md-4">
-          <div class="location-card">
-            <img src="images/larnaca.svg" alt="Larnaca" class="location-image">
-            <div class="location-content">
-              <h3>Larnaca</h3>
-              <p>Historic city with modern amenities</p>
-              <a href="listings.html?location=larnaca" class="btn btn-outline-primary">Browse Larnaca</a>
+        <div class="col-md-6 col-lg-4">
+          <div class="listing-card">
+            <div class="listing-image">
+              <img src="https://images.unsplash.com/photo-1613977257731-904d7f262c64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Beachfront Villa">
+              <span class="listing-badge">Hot</span>
+            </div>
+            <div class="listing-content">
+              <h3>Beachfront Villa in Paphos</h3>
+              <p class="listing-price">€1,200,000</p>
+              <div class="listing-meta">
+                <span><i class="bi bi-geo-alt"></i> Paphos</span>
+                <span><i class="bi bi-house-door"></i> 5 beds</span>
+              </div>
+              <a href="listing-detail.html" class="btn btn-outline-primary w-100 mt-3">View Details</a>
             </div>
           </div>
         </div>
@@ -443,94 +185,54 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials py-5 bg-light">
+  <!-- Why Choose Us -->
+  <section class="why-choose-us py-5">
     <div class="container">
       <div class="section-header text-center mb-5">
-        <h2 class="section-title">What Our Users Say</h2>
-        <p class="section-subtitle">Trusted by thousands of users across Cyprus</p>
+        <h2>Why Choose Cyprus Classified?</h2>
+        <p>We provide the best experience for buying and selling in Cyprus</p>
       </div>
       <div class="row g-4">
-        <!-- Testimonial 1 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="bi bi-quote"></i>
-              <p>"Found my dream apartment in Limassol through Cyprus Classified. The process was smooth and professional."</p>
+          <div class="feature-card text-center">
+            <div class="feature-icon">
+              <i class="bi bi-shield-check"></i>
             </div>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/150?img=1" alt="User" class="author-image">
-              <div class="author-info">
-                <h4>Maria K.</h4>
-                <p>Property Buyer</p>
-              </div>
-            </div>
+            <h3>Safe & Secure</h3>
+            <p>Verified sellers and secure payment options</p>
           </div>
         </div>
-
-        <!-- Testimonial 2 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="bi bi-quote"></i>
-              <p>"Sold my car within a week! The platform is user-friendly and reaches a wide audience."</p>
+          <div class="feature-card text-center">
+            <div class="feature-icon">
+              <i class="bi bi-lightning"></i>
             </div>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/150?img=2" alt="User" class="author-image">
-              <div class="author-info">
-                <h4>Andreas P.</h4>
-                <p>Vehicle Seller</p>
-              </div>
-            </div>
+            <h3>Fast & Easy</h3>
+            <p>Quick posting and instant responses</p>
           </div>
         </div>
-
-        <!-- Testimonial 3 -->
         <div class="col-md-4">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="bi bi-quote"></i>
-              <p>"Found my current job through Cyprus Classified. The job listings are always up to date."</p>
+          <div class="feature-card text-center">
+            <div class="feature-icon">
+              <i class="bi bi-people"></i>
             </div>
-            <div class="testimonial-author">
-              <img src="https://i.pravatar.cc/150?img=3" alt="User" class="author-image">
-              <div class="author-info">
-                <h4>Sophia M.</h4>
-                <p>Job Seeker</p>
-              </div>
-            </div>
+            <h3>Large Community</h3>
+            <p>Join thousands of active users</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action Section -->
-  <section class="cta-section py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h2 class="cta-title">Ready to Buy or Sell?</h2>
-          <p class="cta-text">Join thousands of users who trust Cyprus Classified for their buying and selling needs.</p>
-        </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="post-ad.html" class="btn btn-primary btn-lg">
-            <i class="bi bi-plus-circle"></i> Post an Ad
-          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="footer py-5 bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 mb-4 mb-lg-0">
-          <h5>About Us</h5>
-          <p>Cyprus Classified is your trusted platform for buying and selling in Cyprus. We connect buyers and sellers across the island.</p>
+          <h5>About Cyprus Classified</h5>
+          <p>Your trusted platform for buying and selling in Cyprus. Join thousands of users who trust us for their local marketplace needs.</p>
         </div>
-        <div class="col-lg-4 mb-4 mb-lg-0">
+        <div class="col-lg-2 mb-4 mb-lg-0">
           <h5>Quick Links</h5>
           <ul class="list-unstyled">
             <li><a href="#">About Us</a></li>
@@ -539,12 +241,36 @@
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </div>
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Real Estate</a></li>
+            <li><a href="#">Vehicles</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Furniture</a></li>
+          </ul>
+        </div>
         <div class="col-lg-4">
-          <h5>Connect With Us</h5>
+          <h5>Newsletter</h5>
+          <p>Subscribe to our newsletter for the latest updates and exclusive offers.</p>
+          <form class="newsletter-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 Cyprus Classified. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
           <div class="social-links">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
             <a href="#"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -552,26 +278,59 @@
     </div>
   </footer>
 
+  <!-- Modals -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    // Simple inline JavaScript for debugging
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('Page loaded');
-      
-      // Check if CSS is loaded
-      const styles = Array.from(document.styleSheets);
-      console.log('Loaded stylesheets:', styles.map(s => s.href));
-      
-      // Add event listeners
-      document.getElementById('loginBtn').addEventListener('click', function() {
-        alert('Login button clicked');
-      });
-      
-      document.getElementById('registerBtn').addEventListener('click', function() {
-        alert('Register button clicked');
-      });
-    });
-  </script>
 </body>
 </html>
